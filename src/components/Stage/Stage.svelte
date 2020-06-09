@@ -1,1 +1,5 @@
-<div>this is a stage component</div>
+<script>
+  export let stage
+</script>
+
+<div>this is a stage {stage} component</div>
