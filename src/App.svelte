@@ -14,12 +14,21 @@
 	router.start()
 </script>
 
-<nav>
-  <a href="/">Home</a>
-  <a href="/schedule">Schedule</a>
-</nav>
-<svelte:component this={page} stage={stage}/>
+<main>
+	<nav>
+		<a href="/">Home</a>
+		<a href="/schedule">Schedule</a>
+		<a href="/stage_1">Stage 1</a>
+		<a href="/stage_2">Stage 2</a>
+	</nav>
+	<svelte:component this={page} stage={stage}/>
+</main>
 
 
 <style>
+	main {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
 </style>
