@@ -4,45 +4,35 @@
 	import Schedule from './components/Schedule/Schedule.svelte'
 	import Stage from './components/Stage/Stage.svelte'
 
-	let page, params, currentDay
+	let page
 
 	router('/', () => page = Home)
-	router('/schedule/:day', (ctx, next) => {
-     params = ctx.params
-     next()
-		}, () => page = Schedule
-	)
-	router('/stage_1', () => { page = Stage; params = 1 })
-	router('/stage_2', () => { page = Stage; params = 2 })
+	router('/schedule', () => page = Schedule)
+	router('/stage', () => page = Stage)
 
 	router.start()
-
-	const getCurrentDay = () => {
-		const today = new Date
-		const day = today.getDay()
-		if (day == 6) { currentDay = "saturday" }
-		if (day == 0) { currentDay = "sunday" }
-		currentDay = "friday"
-	}
-
-	$: getCurrentDay()
 </script>
 
 <main>
 	<nav>
-		<a href="/">Home</a>
-		<a href="/schedule/{currentDay}">Schedule</a>
-		<a href="/stage_1">Stage 1</a>
-		<a href="/stage_2">Stage 2</a>
+		<a href='/'>Home</a>
+		<a href='/schedule'>Schedule</a>
+		<a href='/stage'>Stage</a>
 	</nav>
-	<svelte:component this={page} params={params} />
+	<svelte:component this={page} />
 </main>
 
 
 <style>
 	main {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+	}
+
+	nav {
+		position: sticky;
+		top: 0;
 	}
 </style>
