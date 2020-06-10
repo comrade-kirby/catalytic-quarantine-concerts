@@ -1,10 +1,11 @@
 <script>
   import Video from './Video/Video.svelte'
   import Chat from './Chat/Chat.svelte'
-  // export let stage
+  export let params
     
 </script>
 
+<p>this is stage {params}</p>
 <div class='stage'>
   <Video />
   <Chat />
