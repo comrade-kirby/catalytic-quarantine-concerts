@@ -24,7 +24,9 @@
 			<svelte:component this={page} />
 		</div>
 	</div>
-	<img class='background' src='/Trojan-Horse-Ensemble-2.jpg' alt='trojan-horse illustration background'/>
+	<div class='background-container'>
+		<img src='/Trojan-Horse-Ensemble-2.jpg' alt='trojan-horse illustration background'/>
+	</div>
 </main>
 
 
@@ -35,6 +37,7 @@
 		flex-direction: column;
 		flex: 1;
 		background-color: aliceblue;
+		max-height: 100%;
 	}
 
 	.app-container {
@@ -47,6 +50,7 @@
 		height: 100%;
 		overflow: scroll;
 		max-height: 100%;
+		z-index: 1;
 	}
 
 	nav {
@@ -62,11 +66,14 @@
 		flex: 1;
 	}
 
-	.background {
+	.background-container {
 		display: flex;
-		top: 0;
-		left: 0;
+		margin: 20px;
+		justify-content: center;
+		max-height: 100%;
 		flex: 1;
-		padding: 20px;
+		opacity: 0.8;
+		overflow: hidden;
 	}
+
 </style>
