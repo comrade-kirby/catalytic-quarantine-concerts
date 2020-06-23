@@ -3,12 +3,11 @@
 </script>
 
 <div class='chat' bind:clientHeight={height}>
-  <iframe title="twitch chat" 
-    frameborder="100"
-    scrolling="true"
-    id="Experimental_Sound_Studio"
-    src="https://www.twitch.tv/embed/experimental_sound_studio/chat?"
-    height={height}>
+  <iframe
+    title='twitch-chat'
+    id="chat_embed"
+    src="https://www.twitch.tv/embed/experimental_sound_studio/chat?parent=8a5309c2ab5f.ngrok.io"
+    height={height - 10}>
   </iframe>
 </div>
 

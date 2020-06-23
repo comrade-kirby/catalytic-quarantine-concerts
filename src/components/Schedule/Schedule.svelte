@@ -14,33 +14,41 @@
   <div class='times'>
     {#each times as time}
       <div class='time'>
-        <h3>{time}</h3>
+        <h2>{time}</h2>
       </div>
     {/each}
   </div>
 </div>
 
 <style>
-  h3 {
-    margin: 0;
+  h2 {
+    margin: 10px;
+    color: aliceblue;
   }
 
   .schedule {
-    overflow-y: scroll;
+    flex: 1;
+    width: 100%;
+    position: relative;
   }
 
   .day-headers {
-    position: sticky;
+    position: absolute;
+    width: 100%;
     top: 0px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     z-index: 1;
-    background-color: white;
+    background-color: aliceblue;
   }
 
+  .times {
+    height: 100%;
+    overflow: scroll;
+  }
   .time {
-    border-top: 1px solid black;
+    border-top: 1px solid aliceblue;
     height: 100px;
   }
 </style>
