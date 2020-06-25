@@ -2,6 +2,8 @@
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
 
+  import CatalyticSound from './CatalyticSound/CatalyticSound.svelte'
+
   let height
   const screenColumns = [...Array(34).keys()]
 
@@ -19,7 +21,7 @@
 
 <div class='home' bind:clientHeight={height}>
   <div class='home-left'>
-    <h3 class='catalytic-sound'>catalytic sound</h3>
+    <CatalyticSound />
     <h1 class='festival'>Festival 2020</h1>
     <h3 class='dates-month'>July 10-12</h3>
     <div class='screen'>
@@ -46,18 +48,16 @@
     justify-content: center;
     background: rgba(0, 0, 0, 20%);
   }
-  
-  .catalytic-sound {
-    margin: 0 20px 20px 20px;
-  }
+ 
 
   .festival {
     font-family: var(--sans-serif-2);
     margin: 0 20px;
-
+    /* opacity: 0; */
   }
 
   .dates-month {
+    /* opacity: 0; */
     font-family: var(--mono-1);
     margin: 0 20px;
   }
