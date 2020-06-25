@@ -31,6 +31,23 @@
 
 
 <style>
+	:global(body) {
+    --sans-serif-2: 'Quicksand', sans-serif;
+    --mono-1: 'Share Tech Mono', monospace;
+	}
+
+	:global(h1) {
+		font-size: 7rem;
+	}
+
+	:global(h2) {
+		font-size: 5rem;
+	}
+
+	:global(h3) {
+		font-size: 3rem;
+	}
+
 	main {
 		position: relative;
 		display: flex;
@@ -38,6 +55,7 @@
 		flex: 1;
 		background-color: aliceblue;
 		max-height: 100%;
+		color: aliceblue;
 	}
 
 	.app-container {
