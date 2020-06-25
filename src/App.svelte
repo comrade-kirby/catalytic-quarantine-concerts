@@ -78,10 +78,12 @@
 	}
 
 	.page-container {
+		position: relative;
 		display: flex;
 		max-height: 100%;
-		padding: 20px 20px;
+		margin: 20px;
 		flex: 1;
+		overflow: hidden;
 	}
 
 	.background-container {
