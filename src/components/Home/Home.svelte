@@ -3,12 +3,13 @@
   import anime from 'animejs/lib/anime.es.js'
 
   import CatalyticSound from './CatalyticSound/CatalyticSound.svelte'
+  import Festival2020 from './Festival2020/Festival2020.svelte'
 
   let height
   const screenColumns = [...Array(34).keys()]
 
   onMount(() => {
-    var elements = document.querySelectorAll('.screen-column');
+    const elements = document.querySelectorAll('.screen-column');
 
     anime({
       targets: elements,
@@ -22,7 +23,7 @@
 <div class='home' bind:clientHeight={height}>
   <div class='home-left'>
     <CatalyticSound />
-    <h1 class='festival'>Festival 2020</h1>
+    <Festival2020 />
     <h3 class='dates-month'>July 10-12</h3>
     <div class='screen'>
       {#each screenColumns as column}

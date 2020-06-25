@@ -29,6 +29,6 @@
   .catalytic-sound {
     margin: 0 20px 20px 20px;
     position: relative;
-    top: var(--height)
+    top: var(--height);
   }
 </style>
