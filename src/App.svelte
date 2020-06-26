@@ -1,12 +1,14 @@
 <script>
 	import router from 'page'
 	import Home from './components/Home/Home.svelte'
+	import Lineup from './components/Lineup/Lineup.svelte'
 	import Schedule from './components/Schedule/Schedule.svelte'
 	import Stage from './components/Stage/Stage.svelte'
 
 	let page
 
 	router('/', () => page = Home)
+	router('/lineup', () => page = Lineup)
 	router('/schedule', () => page = Schedule)
 	router('/stage', () => page = Stage)
 
