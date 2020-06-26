@@ -15,11 +15,18 @@
   })
 </script>
 
-{#each "festival".split("") as letter }
-  <h1 class='letter'>{letter}</h1>
-{/each}
+<div class='festival'>
+  {#each "Festival".split("") as letter }
+    <h1 class='letter'>{letter}</h1>
+  {/each}
+</div>
 
 <style>
+  .festival {
+    display: flex;
+    flex-direction: row;
+  }
+  
   .letter {
     position: relative;
     top: -20px;
