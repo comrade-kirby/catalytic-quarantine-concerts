@@ -22,7 +22,7 @@
   })
 </script>
 
-<div class='date'>
+<div class='date outro-item'>
   {#if $date}
     <h3 class='dates-month'>{$date}</h3>
   {/if}

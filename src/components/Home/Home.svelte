@@ -1,13 +1,38 @@
 <script>
+	import router from 'page'
+  import anime from 'animejs/lib/anime.es.js'
+  
   import FestivalInfo from './FestivalInfo/FestivalInfo.svelte'
   import SlideScreen from './SlideScreen/SlideScreen.svelte'
   import RightButton from './RightButton/RightButton.svelte'
+
+  let width
+
+  const outro = async (buttonWidth) => {
+    const outroItems = document.querySelectorAll('.outro-item')
+    const fade = anime({
+      targets: outroItems,
+      opacity: [1, 0],
+      delay: anime.stagger(20, {from: 'first'}),
+      easing: 'easeInOutExpo',
+    })
+    
+    const slide = anime({
+      targets: '.button-container',
+      translateX: -(width - buttonWidth),
+      easing: 'easeInOutExpo',
+    })
+
+    await slide.finished
+    router('/lineup')
+  }
+
 </script>
 
-<div class='home' >
+<div class='home' bind:clientWidth={width}>
   <FestivalInfo delay={1000} />
   <SlideScreen delay={4000}/>
-  <RightButton delay={4200} />
+  <RightButton delay={4200} outro={outro} />
 </div>
 
 <style>

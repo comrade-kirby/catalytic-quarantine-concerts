@@ -17,7 +17,7 @@
 </script>
 
 <div 
-  class='catalytic-sound-container' 
+  class='catalytic-sound-container outro-item' 
   bind:clientHeight={height}
   style='--height:{height}px'>
   <h4 class='catalytic-sound'>catalytic sound</h4>

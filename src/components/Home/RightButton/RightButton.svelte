@@ -3,6 +3,7 @@
   import anime from 'animejs/lib/anime.es.js'
 
   export let delay
+  export let outro
 
   let width
 
@@ -27,13 +28,13 @@
 </script>
 
 <div class='button-container'>
-  <a href='/lineup' 
+  <button on:click={() => outro(width)}
     class='right-button' 
     bind:clientWidth={width}>
     {#each "LINEUP".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
-  </a> 
+  </button> 
 </div>
   
 <style>
@@ -43,6 +44,7 @@
     height: 100%;
     overflow: hidden;
     display: flex;
+    transition: right 0.3s ease-in-out;
   }
 
   .right-button {
@@ -54,18 +56,16 @@
     margin: 0;
     border: none;
     border-left: 5px solid aliceblue;
-    background: rgba(0, 0, 0, 10%);
-    transition: background 0.3s ease-in-out;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%));
   }
 
   .button-letter {
     margin: 10px 30px;
     color: aliceblue;
     font-family: var(--mono-1);
-    transition: color 0.3s ease-in-out;
   }
   
-  .right-button:hover {
-    background: rgba(0, 0, 0, 30%);
+  .button-container:hover {
+    right: 20px;
   }
 </style>

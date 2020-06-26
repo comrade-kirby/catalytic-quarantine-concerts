@@ -17,7 +17,7 @@
   })
 </script>
 
-<div class='festival'>
+<div class='festival outro-item'>
   {#each "Festival".split("") as letter }
     <h1 class='letter'>{letter}</h1>
   {/each}

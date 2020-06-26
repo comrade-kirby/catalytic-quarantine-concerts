@@ -35,10 +35,10 @@
 </script>
 
 <div class='year' bind:clientWidth={width}>
-  <div class='twenty-container'>
+  <div class='twenty-container outro-item'>
     <h3 class='twenty'>20</h3>
   </div>
-  <div class='twenty-container'>
+  <div class='twenty-container outro-item'>
     <h3 class='twenty'>20</h3>
   </div>
 </div>
