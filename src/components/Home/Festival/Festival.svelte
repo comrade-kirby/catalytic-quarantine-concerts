@@ -11,7 +11,7 @@
       targets: elements,
       translateY: 20,
       opacity: [0, 1],
-      delay: anime.stagger(30, {start: delay, from: 'first'}),
+      delay: anime.stagger(20, {start: delay, from: 'first'}),
       easing: 'easeInOutExpo'
     });
   })

@@ -14,7 +14,7 @@
       const newDate = $date + textArray.shift()
       date.set(newDate)
       if (textArray.length == 0) { clearInterval(dateInterval) }
-    }, 70)
+    }, 50)
   }
 
   onMount(() => {
