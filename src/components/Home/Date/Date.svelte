@@ -2,6 +2,8 @@
   import { onMount } from 'svelte'
   import { writable } from 'svelte/store'
 
+  export let delay
+
   const dateText = 'July 10-12'
   let textArray = dateText.split('')
   
@@ -12,11 +14,11 @@
       const newDate = $date + textArray.shift()
       date.set(newDate)
       if (textArray.length == 0) { clearInterval(dateInterval) }
-    }, 50)
+    }, 70)
   }
 
   onMount(() => {
-    setTimeout(typeDate, 2200)
+    setTimeout(typeDate, delay)
   })
 </script>
 
@@ -35,7 +37,6 @@
 
   .dates-month {
     position: absolute;
-    right: 0;
     font-family: var(--mono-1);
     z-index: 1;
   }

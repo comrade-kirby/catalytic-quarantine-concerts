@@ -2,13 +2,15 @@
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
 
+  export let delay
+
   let height
 
   onMount(() => {
     anime({
       targets: '.catalytic-sound',
       translateY: -height,
-      delay: 1300,
+      delay,
       easing: 'easeInOutExpo'
     });
   })

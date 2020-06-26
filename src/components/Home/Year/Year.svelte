@@ -2,16 +2,16 @@
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
 
-  let height
+  export let delay
+  let width
 
   const translateContainers = () => {
     const containers = document.querySelectorAll('.twenty-container')
 
     anime({
       targets: containers,
-      translateY: [-height / 4, 0],
-      translateX: [-5, 0],
-      delay: anime.stagger(250, {start: 2200, from: 'first'}),
+      translateX: [width / 4, 0],
+      delay: anime.stagger(250, {start: delay, from: 'first'}),
       easing: 'easeInQuint',
     })
   }
@@ -21,11 +21,9 @@
 
     anime({
       targets: twenties,
-      rotateX: [-100, 0],
-      rotateY: [10, 0],
-      rotateZ: [-10, 0],
+      rotateY: [-100, 0],
       opacity: [0, 1],
-      delay: anime.stagger(250, {start: 2200, from: 'first'}),
+      delay: anime.stagger(250, {start: delay, from: 'first'}),
       easing: 'easeInQuint',
     })
   }
@@ -36,7 +34,7 @@
   })
 </script>
 
-<div class='year' bind:clientHeight={height}>
+<div class='year' bind:clientWidth={width}>
   <div class='twenty-container'>
     <h3 class='twenty'>20</h3>
   </div>

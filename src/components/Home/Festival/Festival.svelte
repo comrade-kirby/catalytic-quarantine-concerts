@@ -2,6 +2,8 @@
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
 
+  export let delay
+
   onMount(() => {
     const elements = document.querySelectorAll('.letter');
 
@@ -9,7 +11,7 @@
       targets: elements,
       translateY: 20,
       opacity: [0, 1],
-      delay: anime.stagger(20, {start: 1600, from: 'first'}),
+      delay: anime.stagger(30, {start: delay, from: 'first'}),
       easing: 'easeInOutExpo'
     });
   })

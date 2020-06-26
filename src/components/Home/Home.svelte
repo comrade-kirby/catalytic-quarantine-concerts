@@ -8,7 +8,7 @@
   import Date from './Date/Date.svelte'
 
   let height
-  const screenColumns = [...Array(34).keys()]
+  const screenColumns = [...Array(30).keys()]
 
   onMount(() => {
     const elements = document.querySelectorAll('.screen-column');
@@ -24,12 +24,12 @@
 
 <div class='home' bind:clientHeight={height}>
   <div class='home-left'>
-    <CatalyticSound />
+    <CatalyticSound delay={1300} />
     <div class='festival2020-container'>
-      <Festival />
-      <Year />
+      <Festival delay={1600} />
+      <Year delay={2500} />
     </div>
-    <Date />
+    <Date delay={2500} />
     <div class='screen'>
       {#each screenColumns as column}
         <div class='screen-column'></div>
