@@ -4,6 +4,7 @@
 
   import CatalyticSound from './CatalyticSound/CatalyticSound.svelte'
   import Festival2020 from './Festival2020/Festival2020.svelte'
+  import Date from './Date/Date.svelte'
 
   let height
   const screenColumns = [...Array(34).keys()]
@@ -24,7 +25,7 @@
   <div class='home-left'>
     <CatalyticSound />
     <Festival2020 />
-    <h3 class='dates-month'>July 10-12</h3>
+    <Date />
     <div class='screen'>
       {#each screenColumns as column}
         <div class='screen-column'></div>
@@ -48,12 +49,6 @@
     flex-direction: column;
     justify-content: center;
     background: rgba(0, 0, 0, 20%);
-  }
-
-  .dates-month {
-    /* opacity: 0; */
-    font-family: var(--mono-1);
-    margin: 0 20px;
   }
 
   .home-right {
