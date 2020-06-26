@@ -11,7 +11,8 @@
       targets: '.right-screen',
       translateX: width,
       delay: delay,
-      easing: 'easeOutExpo',
+      easing: 'easeOutSine',
+      duration: 300
     })
   })
 </script>

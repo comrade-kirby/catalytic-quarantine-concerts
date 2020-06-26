@@ -7,7 +7,7 @@
 <div class='home' >
   <FestivalInfo delay={1000} />
   <SlideScreen delay={4000}/>
-  <RightButton delay={4800} />
+  <RightButton delay={4200} />
 </div>
 
 <style>

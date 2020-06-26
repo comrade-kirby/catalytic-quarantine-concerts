@@ -12,7 +12,7 @@
     anime({
       targets: '.right-button',
       translateX: [width + 20, 0],
-      delay: 4500,
+      delay: delay,
       easing: 'easeOutExpo',
     })
 
@@ -27,11 +27,13 @@
 </script>
 
 <div class='button-container'>
-  <button class='right-button' bind:clientWidth={width}>
+  <a href='/lineup' 
+    class='right-button' 
+    bind:clientWidth={width}>
     {#each "LINEUP".split("") as letter }
-    <h3 class='button-letter'>{letter}</h3>
+      <h3 class='button-letter'>{letter}</h3>
     {/each}
-  </button>
+  </a> 
 </div>
   
 <style>
