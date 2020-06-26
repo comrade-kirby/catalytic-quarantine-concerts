@@ -12,14 +12,14 @@
       targets: elements,
       rotateY: [120, 0],
       opacity: [0, 1],
-      delay: anime.stagger(150, {start: 2200, from: 'first'}),
+      delay: anime.stagger(150, {start: 2500, from: 'first'}),
       easing: 'easeInOutQuint',
     })
     anime({
       targets: containers,
       translateX: [width / 4, 0],
       translateY: [-10, 0],
-      delay: anime.stagger(150, {start: 2200, from: 'first'}),
+      delay: anime.stagger(150, {start: 2500, from: 'first'}),
       easing: 'easeInOutQuint',
     })
   })
