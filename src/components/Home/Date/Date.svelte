@@ -29,20 +29,19 @@
 <style>
 
   .date {
+    margin: 0 20px;
     position: relative;
   }
 
   .dates-month {
     position: absolute;
+    right: 0;
     font-family: var(--mono-1);
-    margin: 0 20px;
     z-index: 1;
   }
 
   .date-placeholder {
     font-family: var(--mono-1);
-    color: navy;
-    opacity: 0.25;
-    margin: 0 20px;
+    opacity: 0;
   }
 </style>

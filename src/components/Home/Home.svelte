@@ -52,6 +52,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     background: rgba(0, 0, 0, 20%);
   }
 
