@@ -27,6 +27,8 @@
   .festival2020-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 20px;
+    align-items: flex-end;
   }
 </style>

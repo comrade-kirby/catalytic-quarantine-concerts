@@ -47,6 +47,10 @@
 	:global(h3) {
 		font-size: 3rem;
 	}
+	
+	:global(h4) {
+		font-size: 2.5rem;
+	}
 
 	main {
 		position: relative;
@@ -66,7 +70,6 @@
 		flex: 1;
 		width: 100%;
 		height: 100%;
-		overflow: scroll;
 		max-height: 100%;
 		z-index: 1;
 	}
@@ -83,7 +86,6 @@
 		max-height: 100%;
 		margin: 20px;
 		flex: 1;
-		overflow: hidden;
 	}
 
 	.background-container {

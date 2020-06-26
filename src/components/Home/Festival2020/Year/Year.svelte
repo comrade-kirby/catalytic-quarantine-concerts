@@ -11,13 +11,13 @@
     anime({
       targets: elements,
       rotateY: [90, 0],
-      delay: anime.stagger(300, {start: 2100, from: 'first'}),
+      delay: anime.stagger(300, {start: 2500, from: 'first'}),
       easing: 'easeInOutQuint',
     })
     anime({
       targets: containers,
       translateX: [width / 4, 0],
-      delay: anime.stagger(300, {start: 2100, from: 'first'}),
+      delay: anime.stagger(300, {start: 2500, from: 'first'}),
       easing: 'easeInOutQuint',
     })
   })
@@ -36,7 +36,7 @@
  .year {
     display: flex;
     flex-direction: row;
-    margin-top: 20px;
+    margin-bottom: 63px;
  }
 
  .twenty {

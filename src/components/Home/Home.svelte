@@ -49,13 +49,6 @@
     justify-content: center;
     background: rgba(0, 0, 0, 20%);
   }
- 
-
-  .festival {
-    font-family: var(--sans-serif-2);
-    margin: 0 20px;
-    /* opacity: 0; */
-  }
 
   .dates-month {
     /* opacity: 0; */

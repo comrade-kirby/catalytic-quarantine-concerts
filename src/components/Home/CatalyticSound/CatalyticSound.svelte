@@ -18,7 +18,7 @@
   class='catalytic-sound-container' 
   bind:clientHeight={height}
   style='--height:{height}px'>
-  <h3 class='catalytic-sound'>catalytic sound</h3>
+  <h4 class='catalytic-sound'>catalytic sound</h4>
 </div>
 
 <style>
