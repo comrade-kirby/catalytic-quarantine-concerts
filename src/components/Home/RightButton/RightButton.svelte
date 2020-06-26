@@ -5,34 +5,45 @@
   let width
 
   onMount(() => {
+    const letters = document.querySelectorAll('.button-letter')
+
     anime({
       targets: '.right-button',
       translateX: [width + 20, 0],
       delay: 4500,
       easing: 'easeOutExpo',
     })
+
+    anime({
+      targets: letters,
+      translateX: [width + 20, 0],
+      opacity: [0, 1],
+      delay: anime.stagger(50, {start: 4800, from: 'center'}),
+      easing: 'easeOutExpo'
+    })
   })
 </script>
 
 <div class='button-container'>
   <button class='right-button' bind:clientWidth={width}>
-    <h2 class='right-button-text'>LINEUP</h2>
+    {#each "LINEUP".split("") as letter }
+      <h2 class='button-letter'>{letter}</h2>
+    {/each}
   </button>
 </div>
   
 <style>
-
   .button-container {
     position: absolute;
     right: 0;
     height: 100%;
     overflow: hidden;
     display: flex;
-    min-width: 150px;
   }
 
   .right-button {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex: 1;
@@ -43,21 +54,14 @@
     transition: background 0.3s ease-in-out;
   }
 
-  .right-button-text {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+  .button-letter {
+    margin: 10px 30px;
     color: aliceblue;
-    margin: 20px;
     font-family: var(--mono-1);
     transition: color 0.3s ease-in-out;
-
   }
-
+  
   .right-button:hover {
-    background: aliceblue;
-  }
-
-  .right-button:hover .right-button-text {
-    color: navy;
+    background: rgba(0, 0, 0, 30%);
   }
 </style>
