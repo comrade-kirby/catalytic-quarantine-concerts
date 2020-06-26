@@ -12,7 +12,7 @@
       targets: containers,
       translateX: [width / 4, 0],
       delay: anime.stagger(250, {start: delay, from: 'first'}),
-      easing: 'easeInQuint',
+      easing: 'cubicBezier(0.44,0.1,0.69,1.51)',
     })
   }
 
@@ -24,7 +24,7 @@
       rotateY: [-100, 0],
       opacity: [0, 1],
       delay: anime.stagger(250, {start: delay, from: 'first'}),
-      easing: 'easeInQuint',
+      easing: 'cubicBezier(0.44,0.1,0.69,1.51)',
     })
   }
   

@@ -5,9 +5,9 @@
 </script>
 
 <div class='home' >
-  <FestivalInfo />
-  <SlideScreen />
-  <RightButton />
+  <FestivalInfo delay={1000} />
+  <SlideScreen delay={4000}/>
+  <RightButton delay={4800} />
 </div>
 
 <style>

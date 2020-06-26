@@ -2,6 +2,8 @@
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
 
+  export let delay
+
   let width
 
   onMount(() => {
@@ -18,7 +20,7 @@
       targets: letters,
       translateX: [width + 20, 0],
       opacity: [0, 1],
-      delay: anime.stagger(50, {start: 4800, from: 'center'}),
+      delay: anime.stagger(50, {start: delay, from: 'center'}),
       easing: 'easeOutExpo'
     })
   })
@@ -27,7 +29,7 @@
 <div class='button-container'>
   <button class='right-button' bind:clientWidth={width}>
     {#each "LINEUP".split("") as letter }
-      <h2 class='button-letter'>{letter}</h2>
+    <h3 class='button-letter'>{letter}</h3>
     {/each}
   </button>
 </div>

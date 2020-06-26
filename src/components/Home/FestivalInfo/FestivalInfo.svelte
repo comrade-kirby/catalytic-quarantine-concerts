@@ -7,8 +7,8 @@
   import Year from './Year/Year.svelte'
   import Date from './Date/Date.svelte'
 
+  export let delay
   let height
-  
   const screenColumns = [...Array(30).keys()]
 
   onMount(() => {
@@ -17,19 +17,19 @@
     anime({
       targets: elements,
       translateY: height,
-      delay: anime.stagger(10, {start: 1000, from: 'last'}),
+      delay: anime.stagger(10, {start: delay, from: 'last'}),
       easing: 'easeInOutExpo'
     })
   })
 </script>
 
 <div class='festival-info' bind:clientHeight={height}>
-    <CatalyticSound delay={1300} />
+    <CatalyticSound delay={delay + 300} />
     <div class='festival2020-container'>
-      <Festival delay={1600} />
-      <Year delay={2500} />
+      <Festival delay={delay + 600} />
+      <Year delay={delay + 1700} />
     </div>
-    <Date delay={2500} />
+    <Date delay={delay + 1500} />
     <div class='screen'>
       {#each screenColumns as column}
         <div class='screen-column'></div>
