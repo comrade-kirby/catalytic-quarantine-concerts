@@ -36,6 +36,10 @@
     --mono-1: 'Share Tech Mono', monospace;
 	}
 
+	:global(*) {
+		text-shadow: 0.5px 0.5px 0 midnightblue;
+	}
+	
 	:global(h1) {
 		font-size: 7rem;
 	}
