@@ -15,11 +15,11 @@
 
 <main>
 	<div class='app-container'>
-		<nav>
+		<!-- <nav>
 			<a href='/'>Home</a>
 			<a href='/schedule'>Schedule</a>
 			<a href='/stage'>Stage</a>
-		</nav>
+		</nav> -->
 		<div class='page-container'>
 			<svelte:component this={page} />
 		</div>

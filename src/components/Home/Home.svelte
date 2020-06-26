@@ -3,7 +3,8 @@
   import anime from 'animejs/lib/anime.es.js'
 
   import CatalyticSound from './CatalyticSound/CatalyticSound.svelte'
-  import Festival2020 from './Festival2020/Festival2020.svelte'
+  import Festival from './Festival/Festival.svelte'
+  import Year from './Year/Year.svelte'
   import Date from './Date/Date.svelte'
 
   let height
@@ -24,7 +25,10 @@
 <div class='home' bind:clientHeight={height}>
   <div class='home-left'>
     <CatalyticSound />
-    <Festival2020 />
+    <div class='festival2020-container'>
+      <Festival />
+      <Year />
+    </div>
     <Date />
     <div class='screen'>
       {#each screenColumns as column}
@@ -49,6 +53,14 @@
     flex-direction: column;
     justify-content: center;
     background: rgba(0, 0, 0, 20%);
+  }
+
+  .festival2020-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    align-items: flex-end;
   }
 
   .home-right {
