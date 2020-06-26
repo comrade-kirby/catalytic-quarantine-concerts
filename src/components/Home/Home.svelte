@@ -1,35 +1,15 @@
 <script>
-  import { onMount } from 'svelte'
-  import anime from 'animejs/lib/anime.es.js'
-
-  import HomeLeft from './HomeLeft/HomeLeft.svelte'
- 
-
-  let rightWidth
-
-  onMount(() => {
-    const elements = document.querySelectorAll('.screen-column');
-
-    anime({
-      targets: '.right-screen',
-      translateX: rightWidth,
-      delay: 3600,
-      easing: 'easeInExpo',
-      duration: 800
-    })
-  })
+  import FestivalInfo from './FestivalInfo/FestivalInfo.svelte'
+  import SlideScreen from './SlideScreen/SlideScreen.svelte'
 </script>
 
 <div class='home' >
-  <HomeLeft />
-  <div class='home-right' bind:clientWidth={rightWidth}>
-    <button class='right-button'>
-      <h2 class='right-button-text'>LINEUP</h2>
-    </button>
-    <div class='right-screen'></div>
-  </div>
+  <FestivalInfo />
+  <SlideScreen />
+  <button class='right-button'>
+    <h2 class='right-button-text'>LINEUP</h2>
+  </button>
 </div>
-
 
 <style>
   .home {
@@ -40,23 +20,11 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 20%), rgba(0, 0, 0, 0%));
   }
 
-  .home-right {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
-    position: relative;
-  }
-
-  .right-screen {
-    flex: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: aliceblue;
-  }
-
   .right-button {
+    position: absolute;
+    right: 0;
     margin: 0;
+    height: 100%;
     min-width: 150px;
     border: none;
     border-left: 5px solid aliceblue;

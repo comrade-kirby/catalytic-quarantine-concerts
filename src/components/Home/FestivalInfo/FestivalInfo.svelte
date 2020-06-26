@@ -23,14 +23,14 @@
   })
 </script>
 
-<div class='home-left' bind:clientHeight={height}>
+<div class='festival-info' bind:clientHeight={height}>
     <CatalyticSound delay={1300} />
     <div class='festival2020-container'>
       <Festival delay={1600} />
       <Year delay={2500} />
     </div>
     <Date delay={2500} />
-    <div class='left-screen'>
+    <div class='screen'>
       {#each screenColumns as column}
         <div class='screen-column'></div>
       {/each}
@@ -39,7 +39,7 @@
 
 
 <style>
-  .home-left {
+  .festival-info {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -55,7 +55,7 @@
     align-items: flex-end;
   }
 
- .left-screen {
+ .screen {
     display: flex;
     flex-direction: row;
     position: absolute;
