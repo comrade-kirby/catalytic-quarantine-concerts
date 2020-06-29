@@ -57,6 +57,10 @@
 	:global(h4) {
 		font-size: 2.5rem;
 	}
+	
+	:global(h5) {
+		font-size: 1.0rem;
+	}
 
 	main {
 		position: relative;
