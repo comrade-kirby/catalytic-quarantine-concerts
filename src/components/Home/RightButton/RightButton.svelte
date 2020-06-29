@@ -35,12 +35,14 @@
       <h3 class='button-letter'>{letter}</h3>
     {/each}
   </button> 
+  <div class='hover-background-buffer'>
+  </div>
 </div>
   
 <style>
   .button-container {
     position: absolute;
-    right: 0;
+    right: -20px;
     height: 100%;
     overflow: hidden;
     display: flex;
@@ -64,12 +66,23 @@
     color: aliceblue;
     font-family: var(--mono-1);
   }
+
+  .hover-background-buffer {
+    background: rgba(0, 0, 0, 25%);
+    width: 20px;
+    flex: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
   
   .button-container:hover {
-    right: 20px;
+    right: 0px;
   }
 
   .button-container.clicked {
-    right: 0;
+    right: -20px;
+  }
+
+  .button-container.clicked .hover-background-buffer {
+    opacity: 0;
   }
 </style>
