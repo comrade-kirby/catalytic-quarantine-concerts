@@ -11,7 +11,7 @@
     const letters = document.querySelectorAll('.button-letter')
 
     anime({
-      targets: '.right-button',
+      targets: '.button-container',
       translateX: [width + 20, 0],
       delay: delay,
       easing: 'easeOutExpo',
@@ -58,17 +58,19 @@
     margin: 0;
     border: none;
     border-left: 5px solid aliceblue;
-    background: rgba(0, 0, 0, 35%);
+    background-color: rgba(0, 0, 0, 35%);
+    transition: background-color 0.3s ease-in-out;
   }
 
   .button-letter {
     margin: 10px 30px;
     color: aliceblue;
     font-family: var(--mono-1);
+    transition: color 0.3s ease-in-out;
   }
 
   .hover-background-buffer {
-    background: rgba(0, 0, 0, 35%);
+    background: aliceblue;
     width: 20px;
     flex: 1;
     transition: opacity 0.3s ease-in-out;
@@ -78,6 +80,17 @@
     right: 0px;
   }
 
+  .button-container:hover .right-button, 
+  .button-container.clicked .right-button {
+    background-color: aliceblue;
+  }
+  
+  .button-container:hover .button-letter, 
+  .button-container.clicked .button-letter {
+    color: black;
+    text-shadow: none;
+  }
+  
   .button-container.clicked {
     right: -20px;
   }
