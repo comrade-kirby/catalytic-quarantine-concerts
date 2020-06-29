@@ -5,7 +5,7 @@
   export let delay
   export let outro
 
-  let width
+  let width, clicked
 
   onMount(() => {
     const letters = document.querySelectorAll('.button-letter')
@@ -27,8 +27,8 @@
   })
 </script>
 
-<div class='button-container'>
-  <button on:click={() => outro(width)}
+<div class='button-container' class:clicked>
+  <button on:click={() => {clicked = true; outro(width)}}
     class='right-button' 
     bind:clientWidth={width}>
     {#each "LINEUP".split("") as letter }
@@ -56,7 +56,7 @@
     margin: 0;
     border: none;
     border-left: 5px solid aliceblue;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%));
+    background: rgba(0, 0, 0, 25%);
   }
 
   .button-letter {
@@ -67,5 +67,9 @@
   
   .button-container:hover {
     right: 20px;
+  }
+
+  .button-container.clicked {
+    right: 0;
   }
 </style>

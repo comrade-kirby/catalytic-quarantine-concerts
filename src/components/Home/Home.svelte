@@ -10,13 +10,22 @@
 
   const outro = async (buttonWidth) => {
     const outroItems = document.querySelectorAll('.outro-item')
-    const fade = anime({
+    
+    anime({
       targets: outroItems,
       opacity: [1, 0],
       delay: anime.stagger(20, {from: 'first'}),
       easing: 'easeInOutExpo',
     })
     
+    anime({
+      targets: '.home',
+      background: [
+        'linear-gradient(90deg, rgba(0, 0, 0, 25%), rgba(0, 0, 0, 0%))',
+        'linear-gradient(90deg, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%))'
+      ]
+    })
+
     const slide = anime({
       targets: '.button-container',
       translateX: -(width - buttonWidth),
@@ -41,6 +50,6 @@
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 20%), rgba(0, 0, 0, 0%));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 25%), rgba(0, 0, 0, 0%));
   }
 </style>
