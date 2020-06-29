@@ -19,7 +19,7 @@
     },
     {
       day: 'SUNDAY',
-      yOffset: 0.3,
+      yOffset: 0.35,
       artists: ['Chris Corsano', 'Susan Alcorn / Macie Stewart / Tim Daisy', 'Ingebrigt Håker Flaten / Håkon Kornstad', 'Mats Gustafsson / Jaap Blonk / Fred Lonberg-Holm', 'Ikue Mori', 'Claire Rousay', 'Ben Hall / Bonnie Jones / Luke Stewart', 'Joe Morris']
     }
   ]
