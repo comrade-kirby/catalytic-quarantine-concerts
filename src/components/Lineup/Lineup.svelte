@@ -4,7 +4,7 @@
 
   import Day from './Day/Day.svelte'
   
-  let height
+  let height, width
 
   const lineupDays = [
     {
@@ -27,7 +27,7 @@
   onMount(() => {
     anime({
       targets: '.lineup-day-container',
-      translateY: [height, 0],
+      translateX: [width, 0],
       delay: anime.stagger(200, {from: 'first'}),
       easing: 'easeInOutExpo',
     })
@@ -41,7 +41,9 @@
       <h3 class='button-letter'>{letter}</h3>
     {/each}
   </div>   
-  <div class='lineup-content' bind:clientHeight={height}>
+  <div class='lineup-content' 
+  bind:clientHeight={height}
+  bind:clientWidth={width}>
     {#each lineupDays as lineupDay, i}
       <div class='lineup-day-container'>
         <Day 

@@ -17,7 +17,7 @@
   onMount(() => {
     anime({
       targets: `.artist${index}`,
-      translateY: [30, 0],
+      translateX: [60, 0],
       opacity: [0.5, 1],
       easing: 'easeOutExpo',
       delay: anime.stagger(50, {start: delay, from: 'first'}),
@@ -56,6 +56,8 @@
 
   .day {
     margin: 0 20px 20px;
+    color: midnightblue;
+    text-shadow: none;
   }
   
   .artists {

@@ -59,7 +59,7 @@
 	}
 	
 	:global(h5) {
-		font-size: 1.0rem;
+		font-size: 1.25rem;
 	}
 
 	main {
