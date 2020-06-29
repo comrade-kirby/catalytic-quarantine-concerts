@@ -29,7 +29,12 @@
         <h4>{lineupDay.day}</h4>
         <div class='artists'>
           {#each lineupDay.artists as artist, i}
-            <h5 class='artist' class:lighter={i % 2 !== 0}>{artist}</h5>
+            <h5 
+              class='artist' 
+              class:lighter={i % 3 == 1}
+              class:darker={i % 3 == 2}>
+              {artist}
+            </h5>
           {/each}
         </div>
       </div>
@@ -91,9 +96,14 @@
     color: midnightblue;
     text-shadow: none;
     margin: 10px;
+    text-align: center;
   }
 
   .lighter { 
     color: steelblue;
+  }
+
+  .darker { 
+    color: CornflowerBlue;
   }
 </style>
