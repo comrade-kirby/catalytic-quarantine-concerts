@@ -58,7 +58,7 @@
     margin: 0;
     border: none;
     border-left: 5px solid aliceblue;
-    background: rgba(0, 0, 0, 25%);
+    background: rgba(0, 0, 0, 35%);
   }
 
   .button-letter {
@@ -68,7 +68,7 @@
   }
 
   .hover-background-buffer {
-    background: rgba(0, 0, 0, 25%);
+    background: rgba(0, 0, 0, 35%);
     width: 20px;
     flex: 1;
     transition: opacity 0.3s ease-in-out;

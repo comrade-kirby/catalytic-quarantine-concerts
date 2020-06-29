@@ -50,6 +50,6 @@
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 25%), rgba(0, 0, 0, 0%));
+    background: linear-gradient(90deg, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%));
   }
 </style>

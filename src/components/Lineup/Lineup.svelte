@@ -18,7 +18,7 @@
     justify-content: center;
     align-items: center;
     padding: 6.4px;
-    background: rgba(0, 0, 0, 25%);
+    background: rgba(0, 0, 0, 35%);
   }
 
   .button-letter {
