@@ -1,19 +1,49 @@
-<div class='button-container'>
-  
+<script>
+
+  const lineupDays = [
+    {
+      day: 'Friday',
+      artists: []
+    },
+    {
+      day: 'Saturday',
+      artists: []
+    },
+    {
+      day: 'Sunday',
+      artists: []
+    }
+  ]
+</script>
+
+
+<div class='lineup'>
+  <div class='header-container'>
     {#each "LINEUP".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
+  </div>
+  <div class='lineup-content'>
+    {#each lineupDays as lineupDay}
+      <div class='lineup-day'>
+        <h4>{lineupDay.day}</h4>
+      </div>
+    {/each}
+  </div>
 </div>
   
 <style>
-  .button-container {
-    position: absolute;
-    left: 0;
+  .lineup {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-container {
+    display: flex;
     height: 100%;
-    overflow: hidden;
-    display: flex;
-    transition: right 0.3s ease-in-out;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -26,8 +56,10 @@
     color: aliceblue;
     font-family: var(--mono-1);
   }
-  
-  .button-container:hover {
-    right: 20px;
+
+  .lineup-content {
+    display: flex;
+    flex: 1;
+    justify-content: space-evenly;
   }
 </style>
