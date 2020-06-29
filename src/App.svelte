@@ -39,7 +39,7 @@
 	}
 
 	:global(*) {
-		text-shadow: 0.5px 0.5px 0 midnightblue;
+		text-shadow: 2px 2px 1px midnightblue;
 	}
 	
 	:global(h1) {
@@ -80,11 +80,11 @@
 		z-index: 1;
 	}
 
-	nav {
+	/* nav {
 		position: absolute;
 		z-index: 1;
 		top: 0;
-	}
+	} */
 
 	.page-container {
 		position: relative;
