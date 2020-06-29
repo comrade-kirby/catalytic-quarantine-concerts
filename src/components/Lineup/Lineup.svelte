@@ -8,17 +8,17 @@
 
   const lineupDays = [
     {
-      day: 'Friday',
+      day: 'FRIDAY',
       yOffset: 0.5,
       artists: ['Terrie Ex / Ab Baars / Ig Henneman', 'Jaap Blonk', 'Ken Vandermark', 'Paal Nilssen-Love / Frode Gjerstad', 'Sylvie Courvoisier', 'Brandon Lopez', 'Nate Wooley / Ikue Mori', 'Fred Lonberg-Holm / Joe McPhee']
     },
     {
-      day: 'Saturday',
+      day: 'SATURDAY',
       yOffset: 0.7,
       artists: ['Elisabeth Harnik', 'Icepick (Corsano / Håker Flaten / Wooley)', 'Claire Rousay / Mats Gustafsson', 'Terrie Ex / Andy Moor', 'Tim Daisy & Dave Rempis', 'Luke Stewart', 'McPhee', 'Marker']
     },
     {
-      day: 'Sunday',
+      day: 'SUNDAY',
       yOffset: 0.3,
       artists: ['Chris Corsano', 'Susan Alcorn / Macie Stewart / Tim Daisy', 'Ingebrigt Håker Flaten / Håkon Kornstad', 'Mats Gustafsson / Jaap Blonk / Fred Lonberg-Holm', 'Ikue Mori', 'Claire Rousay', 'Ben Hall / Bonnie Jones / Luke Stewart', 'Joe Morris']
     }
@@ -28,7 +28,9 @@
     anime({
       targets: '.lineup-day-container',
       translateX: [width, 0],
-      delay: anime.stagger(200, {from: 'first'}),
+      opacity: [0, 1],
+      duration: 1000,
+      delay: anime.stagger(150, {from: 'first'}),
       easing: 'easeInOutExpo',
     })
   })
@@ -64,6 +66,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    overflow: hidden;
   }
 
   .header-container {
@@ -73,12 +76,13 @@
     justify-content: center;
     align-items: center;
     padding: 6.4px;
-    background: rgba(0, 0, 0, 35%);
+    background-color: aliceblue;
   }
 
   .button-letter {
     margin: 10px 30px;
-    color: aliceblue;
+    color: black;
+    text-shadow: none;
     font-family: var(--mono-1);
   }
 

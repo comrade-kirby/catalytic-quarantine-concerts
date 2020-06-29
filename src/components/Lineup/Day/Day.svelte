@@ -51,13 +51,13 @@
     background-color: aliceblue;
     padding: 20px 0px;
     margin: 0 20px;
-
   }
 
   .day {
     margin: 0 20px 20px;
-    color: midnightblue;
+    color: black;
     text-shadow: none;
+    letter-spacing: 1rem;
   }
   
   .artists {
@@ -79,6 +79,6 @@
   }
 
   .darker { 
-    color: CornflowerBlue;
+    color: black;
   }
 </style>

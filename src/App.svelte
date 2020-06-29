@@ -39,7 +39,7 @@
 	}
 
 	:global(*) {
-		text-shadow: 2px 2px 1px midnightblue;
+		text-shadow: 2px 2px 1px black;
 	}
 	
 	:global(h1) {
@@ -56,10 +56,17 @@
 	
 	:global(h4) {
 		font-size: 2.5rem;
+		font-family: var(--mono-1);
 	}
 	
 	:global(h5) {
 		font-size: 1.25rem;
+		font-family: var(--sans-serif-2);
+	}
+	
+	:global(h6) {
+		font-size: 1rem;
+		font-family: var(--mono-1);
 	}
 
 	main {
