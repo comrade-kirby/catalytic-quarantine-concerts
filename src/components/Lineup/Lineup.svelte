@@ -1,10 +1,12 @@
  <script>
   import { onMount } from 'svelte'
+	import page from 'page'
   import anime from 'animejs/lib/anime.es.js'
 
+	import lineupTransitions from '../../transitions/lineup'
   import Day from './Day/Day.svelte'
   
-  let height, width
+  let height, width, outro
 
   const lineupDays = [
     {
@@ -24,21 +26,20 @@
     }
   ]
 
+  page.exit('/lineup', (ctx, next) => {
+    outro = true
+    const transition = lineupTransitions.outro(width)
+    transition.finished.then(next)
+  })
+  
   onMount(() => {
-    anime({
-      targets: '.lineup-day-container',
-      translateX: [width, 0],
-      opacity: [0, 1],
-      duration: 1000,
-      delay: anime.stagger(150, {from: 'first'}),
-      easing: 'easeInOutExpo',
-    })
+    lineupTransitions.intro(width)
   })
 </script>
 
 
 <div class='lineup'>
-  <div class='header-container'>
+  <div class='header-container' class:outro>
     {#each "LINEUP".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
@@ -77,6 +78,7 @@
     align-items: center;
     padding: 6.4px;
     background-color: aliceblue;
+    transition: background-color 1s ease-in-out 0.45s, border-right 1s ease-in-out 0.45s;
   }
 
   .button-letter {
@@ -84,6 +86,7 @@
     color: black;
     text-shadow: none;
     font-family: var(--mono-1);
+    transition: color 1s ease-in-out 0.45s;
   }
 
   .lineup-content {
@@ -92,4 +95,14 @@
     justify-content: space-evenly;
     height: 100%;
   }
+
+  .header-container.outro {
+    background-color: rgba(0, 0, 0, 35%);
+    border-left: 5px solid aliceblue;
+  }
+
+  .header-container.outro .button-letter{
+    color: aliceblue;
+  }
+
 </style>
