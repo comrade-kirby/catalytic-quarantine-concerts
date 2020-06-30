@@ -26,22 +26,23 @@
 </script>
 
 <div class='festival-info' >
-    <CatalyticSound delay={delay + 300} initialVisit={initialVisit} />
-    <div class='festival2020-container'>
-      <Festival delay={delay + 600} initialVisit={initialVisit} />
-      <Year delay={delay + 1700} initialVisit={initialVisit} />
-    </div>
-    <Date delay={delay + 1500} initialVisit={initialVisit} />
-    {#if initialVisit}
-      <CascadeScreen delay={delay} />
-    {/if}
+  <CatalyticSound delay={delay + 300} initialVisit={initialVisit} />
+  <div class='festival2020-container'>
+    <Festival delay={delay + 600} initialVisit={initialVisit} />
+    <Year delay={delay + 1700} initialVisit={initialVisit} />
   </div>
+  <Date delay={delay + 1500} initialVisit={initialVisit} />
+  {#if initialVisit}
+    <CascadeScreen delay={delay} />
+  {/if}
+</div>
 
 
 <style>
   .festival-info {
     position: relative;
     display: flex;
+    flex: 1;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;

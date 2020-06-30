@@ -9,7 +9,7 @@
   onMount(() => {
     if (initialVisit) {
       anime({
-        targets: '.right-screen',
+        targets: '.slide-screen',
         translateX: width,
         delay: delay,
         easing: 'easeOutSine',
@@ -19,10 +19,13 @@
   })
 </script>
 
-<div class='right-screen' bind:clientWidth={width}></div>
+<div class='slide-screen' bind:clientWidth={width}></div>
 
 <style>
-  .right-screen {
+  .slide-screen {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex: 1;
     align-items: flex-end;

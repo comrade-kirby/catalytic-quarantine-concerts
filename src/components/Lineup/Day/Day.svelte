@@ -49,6 +49,7 @@
     display: flex;
     flex-direction: column;
     background-color: aliceblue;
+    border-radius: 5px;
     padding: 20px 0px;
     margin: 0 20px;
   }
