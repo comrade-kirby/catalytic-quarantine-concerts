@@ -70,22 +70,23 @@
 	}
 	
 	:global(h5) {
-		font-size: 1.25rem;
+		font-size: 1.5rem;
+		line-height: 2rem;
 		font-family: var(--sans-serif-2);
 	}
 	
 	:global(h6) {
-		font-size: 1rem;
-		font-family: var(--mono-1);
+		font-size: 1.25rem;
+		font-family: var(--sans-serif-2);
 	}
 
 	:global(p) {
 		font-size: 1.15rem;
-		line-height: 2.5rem;
+		line-height: 2.25rem;
 	}
 
 	:global(a) {
-    font-size: 2rem;
+    font-size: 1.5rem;
 		letter-spacing: .5rem;
     font-family: var(--mono-1);
     text-decoration: none;
