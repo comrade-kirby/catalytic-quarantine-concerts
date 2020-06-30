@@ -9,14 +9,12 @@
   const translateContainers = () => {
     const containers = document.querySelectorAll('.twenty-container')
 
-    if (initialVisit) {
-      anime({
-        targets: containers,
-        translateX: [width / 4, 0],
-        delay: anime.stagger(250, {start: delay, from: 'first'}),
-        easing: 'cubicBezier(0.44,0.1,0.69,1.51)',
-      })
-    }
+    anime({
+      targets: containers,
+      translateX: [width / 4, 0],
+      delay: anime.stagger(250, {start: delay, from: 'first'}),
+      easing: 'cubicBezier(0.44,0.1,0.69,1.51)',
+    })
   }
 
   const rotateTwenties = () => {
@@ -32,17 +30,19 @@
   }
   
   onMount(() => {
-    translateContainers()
-    rotateTwenties()
+    if (initialVisit) {
+      translateContainers()
+      rotateTwenties()
+    }
   })
 </script>
 
 <div class='year' bind:clientWidth={width}>
   <div class='twenty-container outro-item'>
-    <h3 class='twenty'>20</h3>
+    <h3 class='twenty festival-info-element'>20</h3>
   </div>
   <div class='twenty-container outro-item'>
-    <h3 class='twenty'>20</h3>
+    <h3 class='twenty festival-info-element'>20</h3>
   </div>
 </div>
 

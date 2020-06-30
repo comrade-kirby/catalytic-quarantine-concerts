@@ -22,7 +22,7 @@
 
 <div class='festival outro-item'>
   {#each "Festival".split("") as letter }
-    <h1 class='letter'>{letter}</h1>
+    <h1 class='letter festival-info-element'>{letter}</h1>
   {/each}
 </div>
 

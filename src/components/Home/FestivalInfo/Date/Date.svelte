@@ -29,7 +29,7 @@
   {#if $date}
     <h3 class='dates-month'>{$date}</h3>
   {/if}
-  <h3 class='date-placeholder'>{dateText}</h3>
+  <h3 class='date-placeholder festival-info-element'>{dateText}</h3>
 </div>
 <style>
 

@@ -1,6 +1,6 @@
 <script>
-  // import { onMount } from 'svelte'
-  // import anime from 'animejs/lib/anime.es.js'
+  import { onMount } from 'svelte'
+  import anime from 'animejs/lib/anime.es.js'
 
   import CatalyticSound from './CatalyticSound/CatalyticSound.svelte'
   import Festival from './Festival/Festival.svelte'
@@ -10,15 +10,28 @@
 
   export let delay
   export let initialVisit
+
+  onMount(() => {
+    if (!initialVisit) {
+      const elements = document.querySelectorAll('.festival-info-element')
+
+      anime({
+        targets: elements,
+        opacity: [0, 1],
+        easing: 'easeOutExpo',
+        delay: anime.stagger(50, {from: 'first'}),
+      })
+    }
+  })
 </script>
 
 <div class='festival-info' >
-    <CatalyticSound delay={delay + 300} />
+    <CatalyticSound delay={delay + 300} initialVisit={initialVisit} />
     <div class='festival2020-container'>
       <Festival delay={delay + 600} initialVisit={initialVisit} />
       <Year delay={delay + 1700} initialVisit={initialVisit} />
     </div>
-    <Date delay={delay + 1500} initialVisit={initialVisit} />\
+    <Date delay={delay + 1500} initialVisit={initialVisit} />
     {#if initialVisit}
       <CascadeScreen delay={delay} />
     {/if}
