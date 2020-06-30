@@ -79,6 +79,18 @@
 		font-family: var(--mono-1);
 	}
 
+	:global(p) {
+		font-size: 1.15rem;
+		line-height: 2.5rem;
+	}
+
+	:global(a) {
+    font-size: 2rem;
+		letter-spacing: .5rem;
+    font-family: var(--mono-1);
+    text-decoration: none;
+	}
+
 	main {
 		position: relative;
 		display: flex;
