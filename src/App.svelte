@@ -6,9 +6,18 @@
 	import Stage from './components/Stage/Stage.svelte'
 	import lineupTransitions from './transitions/lineup'
 
-	let currentPage
+	let currentPage, initialVisit
 
-	page('/', () => currentPage = Home)
+	page('/', (ctx) => {
+		if (ctx.state.visited) {
+			initialVisit = false
+		} else {
+			initialVisit = true
+			ctx.state.visited = true
+			ctx.save()
+		}
+		currentPage = Home
+	})
 	page('/lineup', () => currentPage = Lineup)
 	page('/schedule', () => currentPage = Schedule)
 	page('/stage', () => currentPage = Stage)
@@ -24,7 +33,7 @@
 			<a href='/stage'>Stage</a>
 		</nav> -->
 		<div class='page-container'>
-			<svelte:component this={currentPage} />
+			<svelte:component this={currentPage} initialVisit={initialVisit} />
 		</div>
 	</div>
 	<div class='background-container'>
