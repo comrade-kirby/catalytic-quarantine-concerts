@@ -50,7 +50,7 @@
       <div class='lineup-day-container'>
         <Day 
           index={i}
-          delay={i*200 + 400}
+          delay={i*200 + 450}
           day={lineupDay.day} 
           yOffset={lineupDay.yOffset * height}
           artists={lineupDay.artists} />
