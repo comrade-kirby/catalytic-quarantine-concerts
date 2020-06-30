@@ -8,6 +8,8 @@
 
   let width
 
+  export let initialVisit
+
   const outro = async (buttonWidth) => {
     const outroItems = document.querySelectorAll('.outro-item')
     
@@ -35,13 +37,12 @@
     await slide.finished
     router('/lineup')
   }
-
 </script>
 
 <div class='home' bind:clientWidth={width}>
-  <FestivalInfo delay={1000} />
-  <SlideScreen delay={4000}/>
-  <RightButton delay={4200} outro={outro} />
+  <FestivalInfo delay={1000} initialVisit={initialVisit} />
+  <SlideScreen delay={4000} initialVisit={initialVisit} />
+  <RightButton delay={4200} initialVisit={initialVisit} outro={outro} />
 </div>
 
 <style>

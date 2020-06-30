@@ -3,27 +3,29 @@
   import anime from 'animejs/lib/anime.es.js'
 
   export let delay
+  export let initialVisit
   export let outro
 
   let width, clicked
 
   onMount(() => {
     const letters = document.querySelectorAll('.button-letter')
+    if (initialVisit) {
+      anime({
+        targets: '.button-container',
+        translateX: [width + 20, 0],
+        delay: delay,
+        easing: 'easeOutExpo',
+      })
 
-    anime({
-      targets: '.button-container',
-      translateX: [width + 20, 0],
-      delay: delay,
-      easing: 'easeOutExpo',
-    })
-
-    anime({
-      targets: letters,
-      translateX: [width + 20, 0],
-      opacity: [0, 1],
-      delay: anime.stagger(50, {start: delay, from: 'center'}),
-      easing: 'easeOutExpo'
-    })
+      anime({
+        targets: letters,
+        translateX: [width + 20, 0],
+        opacity: [0, 1],
+        delay: anime.stagger(50, {start: delay, from: 'center'}),
+        easing: 'easeOutExpo'
+      })
+    }
   })
 </script>
 

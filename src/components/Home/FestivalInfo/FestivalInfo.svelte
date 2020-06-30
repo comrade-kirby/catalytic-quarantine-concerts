@@ -8,28 +8,32 @@
   import Date from './Date/Date.svelte'
 
   export let delay
+  export let initialVisit
+
   let height
   const screenColumns = [...Array(30).keys()]
 
   onMount(() => {
     const elements = document.querySelectorAll('.screen-column');
 
-    anime({
-      targets: elements,
-      translateY: height,
-      delay: anime.stagger(10, {start: delay, from: 'last'}),
-      easing: 'easeInOutExpo'
-    })
+    if (initialVisit) {
+      anime({
+        targets: elements,
+        translateY: height,
+        delay: anime.stagger(10, {start: delay, from: 'last'}),
+        easing: 'easeInOutExpo'
+      })
+    }
   })
 </script>
 
 <div class='festival-info' bind:clientHeight={height}>
     <CatalyticSound delay={delay + 300} />
     <div class='festival2020-container'>
-      <Festival delay={delay + 600} />
-      <Year delay={delay + 1700} />
+      <Festival delay={delay + 600} initialVisit={initialVisit} />
+      <Year delay={delay + 1700} initialVisit={initialVisit} />
     </div>
-    <Date delay={delay + 1500} />
+    <Date delay={delay + 1500} initialVisit={initialVisit} />
     <div class='screen'>
       {#each screenColumns as column}
         <div class='screen-column'></div>

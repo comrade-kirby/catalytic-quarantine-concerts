@@ -3,17 +3,20 @@
   import anime from 'animejs/lib/anime.es.js'
 
   export let delay
+  export let initialVisit
   let width
 
   const translateContainers = () => {
     const containers = document.querySelectorAll('.twenty-container')
 
-    anime({
-      targets: containers,
-      translateX: [width / 4, 0],
-      delay: anime.stagger(250, {start: delay, from: 'first'}),
-      easing: 'cubicBezier(0.44,0.1,0.69,1.51)',
-    })
+    if (initialVisit) {
+      anime({
+        targets: containers,
+        translateX: [width / 4, 0],
+        delay: anime.stagger(250, {start: delay, from: 'first'}),
+        easing: 'cubicBezier(0.44,0.1,0.69,1.51)',
+      })
+    }
   }
 
   const rotateTwenties = () => {

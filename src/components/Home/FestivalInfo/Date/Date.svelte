@@ -3,6 +3,7 @@
   import { writable } from 'svelte/store'
 
   export let delay
+  export let initialVisit
 
   const dateText = 'July 10-12'
   let textArray = dateText.split('')
@@ -18,7 +19,9 @@
   }
 
   onMount(() => {
-    setTimeout(typeDate, delay)
+    if (initialVisit) {
+      setTimeout(typeDate, delay)
+    }
   })
 </script>
 

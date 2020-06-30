@@ -3,17 +3,19 @@
   import anime from 'animejs/lib/anime.es.js'
 
   export let delay
-
+  export let initialVisit
   let width
 
   onMount(() => {
-    anime({
-      targets: '.right-screen',
-      translateX: width,
-      delay: delay,
-      easing: 'easeOutSine',
-      duration: 300
-    })
+    if (initialVisit) {
+      anime({
+        targets: '.right-screen',
+        translateX: width,
+        delay: delay,
+        easing: 'easeOutSine',
+        duration: 300
+      })
+    }
   })
 </script>
 
