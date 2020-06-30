@@ -1,18 +1,19 @@
 <script>
-	import router from 'page'
+	import page from 'page'
 	import Home from './components/Home/Home.svelte'
 	import Lineup from './components/Lineup/Lineup.svelte'
 	import Schedule from './components/Schedule/Schedule.svelte'
 	import Stage from './components/Stage/Stage.svelte'
+	import lineupTransitions from './transitions/lineup'
 
-	let page
+	let currentPage
 
-	router('/', () => page = Home)
-	router('/lineup', () => page = Lineup)
-	router('/schedule', () => page = Schedule)
-	router('/stage', () => page = Stage)
+	page('/', () => currentPage = Home)
+	page('/lineup', () => currentPage = Lineup)
+	page('/schedule', () => currentPage = Schedule)
+	page('/stage', () => currentPage = Stage)
 
-	router.start()
+	page.start()
 </script>
 
 <main>
@@ -23,7 +24,7 @@
 			<a href='/stage'>Stage</a>
 		</nav> -->
 		<div class='page-container'>
-			<svelte:component this={page} />
+			<svelte:component this={currentPage} />
 		</div>
 	</div>
 	<div class='background-container'>
