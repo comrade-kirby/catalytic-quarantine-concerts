@@ -1,44 +1,27 @@
 <script>
-  import { onMount } from 'svelte'
-  import anime from 'animejs/lib/anime.es.js'
+  // import { onMount } from 'svelte'
+  // import anime from 'animejs/lib/anime.es.js'
 
   import CatalyticSound from './CatalyticSound/CatalyticSound.svelte'
   import Festival from './Festival/Festival.svelte'
   import Year from './Year/Year.svelte'
   import Date from './Date/Date.svelte'
+  import CascadeScreen from './CascadeScreen/CascadeScreen.svelte'
 
   export let delay
   export let initialVisit
-
-  let height
-  const screenColumns = [...Array(30).keys()]
-
-  onMount(() => {
-    const elements = document.querySelectorAll('.screen-column');
-
-    if (initialVisit) {
-      anime({
-        targets: elements,
-        translateY: height,
-        delay: anime.stagger(10, {start: delay, from: 'last'}),
-        easing: 'easeInOutExpo'
-      })
-    }
-  })
 </script>
 
-<div class='festival-info' bind:clientHeight={height}>
+<div class='festival-info' >
     <CatalyticSound delay={delay + 300} />
     <div class='festival2020-container'>
       <Festival delay={delay + 600} initialVisit={initialVisit} />
       <Year delay={delay + 1700} initialVisit={initialVisit} />
     </div>
-    <Date delay={delay + 1500} initialVisit={initialVisit} />
-    <div class='screen'>
-      {#each screenColumns as column}
-        <div class='screen-column'></div>
-      {/each}
-    </div>
+    <Date delay={delay + 1500} initialVisit={initialVisit} />\
+    {#if initialVisit}
+      <CascadeScreen delay={delay} />
+    {/if}
   </div>
 
 
@@ -57,20 +40,5 @@
     flex-wrap: wrap;
     margin: 0 20px;
     align-items: flex-end;
-  }
-
- .screen {
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .screen-column {
-    display: flex;
-    flex: 1;
-    background: aliceblue;
   }
 </style>

@@ -41,7 +41,9 @@
 
 <div class='home' bind:clientWidth={width}>
   <FestivalInfo delay={1000} initialVisit={initialVisit} />
-  <SlideScreen delay={4000} initialVisit={initialVisit} />
+  {#if initialVisit}
+    <SlideScreen delay={4000} initialVisit={initialVisit} />
+  {/if}
   <RightButton delay={4200} initialVisit={initialVisit} outro={outro} />
 </div>
 
