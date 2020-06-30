@@ -24,7 +24,7 @@ const transitions = {
     return anime({
       targets: '.header-container',
       translateX: width,
-      delay: 450,
+      delay: 300,
       easing: 'easeInOutExpo',
     })
   }
