@@ -32,12 +32,12 @@
   <h4 class='day'>{day}</h4>
   <div class='artists'>
     {#each artists as artist, i}
-      <h5 
+      <h6
         class='artist artist{index}' 
         class:lighter={i % 3 == 1}
         class:darker={i % 3 == 2}>
         {artist}
-      </h5>
+      </h6>
     {/each}
   </div>
 </div>

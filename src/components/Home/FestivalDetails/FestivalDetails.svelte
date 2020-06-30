@@ -8,11 +8,11 @@
   {#if initialVisit}
     <SlideScreen delay={4000} initialVisit={initialVisit} />
   {/if}
-  <div class='festival-details'>
+  <div class='festival-details outro-item festival-info-element'>
     <h3>Performances, discussion, and new work from the Catalytic Sound Co-op.</h3>
     <div class='festival-details-bottom'>
       <div class='donate'>
-        <h4>$10/program suggested donation</h4>
+        <h5>$10/program suggested donation</h5>
         <a href="" >donate</a>
       </div>
       <p>Music, video, and live performances each day at 1 pm and 7 pm US Central Time. Discussion panel after each afternoon program.</p>
@@ -47,6 +47,8 @@
   .donate {
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
+    flex: 1;
   }
 
   h3 {
@@ -58,13 +60,14 @@
   }
 
   p {
+    flex: 2;
     padding: 20px 0 0 20px;
     text-shadow: none;
     color: black;
     text-align: justify;
   }
 
-  h4 {
+  h5 {
     margin-top: 80px;
     text-shadow: none;
     background-color: midnightblue;

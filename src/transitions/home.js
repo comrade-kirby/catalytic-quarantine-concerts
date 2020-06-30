@@ -8,7 +8,7 @@ const transitions = {
     anime({
       targets: outroItems,
       opacity: [1, 0],
-      delay: anime.stagger(20, {from: 'first'}),
+      delay: anime.stagger(20, {from: 'last'}),
       easing: 'easeInOutExpo',
     })
     
