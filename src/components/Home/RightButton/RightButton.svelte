@@ -1,10 +1,12 @@
 <script>
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
+	import homeTransitions from '../../../transitions/home'
+
 
   export let delay
   export let initialVisit
-  export let outro
+  export let homeWidth
 
   let width, clicked
 
@@ -30,7 +32,7 @@
 </script>
 
 <div class='button-container' class:clicked>
-  <button on:click={() => {clicked = true; outro(width)}}
+  <button on:click={() => {clicked = true; homeTransitions.outro(homeWidth, width)}}
     class='right-button' 
     bind:clientWidth={width}>
     {#each "LINEUP".split("") as letter }
