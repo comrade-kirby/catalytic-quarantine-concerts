@@ -188,7 +188,7 @@
 		}
 
 		:global(a) {
-			padding: 10px;
+			padding: 10px 20px;
 		}
 	}
 </style>
