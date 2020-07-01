@@ -43,6 +43,12 @@
 
 
 <style>
+	@media (max-width: 1500px) {
+		:global(html) {
+			font-size: 80%;
+		}
+	}
+
 	:global(body) {
     --sans-serif-2: 'Quicksand', sans-serif;
     --mono-1: 'Share Tech Mono', monospace;
@@ -138,4 +144,17 @@
 		overflow: hidden;
 	}
 
+	@media (max-width: 1100px) {
+		:global(html) {
+			font-size: 50%;
+		}
+
+		.page-container {
+			margin: 0;
+		}
+
+		.background-container {
+			margin: 0;
+		}
+	}
 </style>

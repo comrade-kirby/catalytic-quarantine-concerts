@@ -29,4 +29,10 @@
     display: flex;
     flex-direction: row;
   }
+
+  @media (max-width: 1200px) {
+    .festival-content {
+      flex-direction: column;
+    }
+  }
 </style>
