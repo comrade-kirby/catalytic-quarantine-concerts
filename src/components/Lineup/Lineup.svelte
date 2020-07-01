@@ -30,7 +30,7 @@
   page.exit('/lineup', (ctx, next) => {
     outro = true
     const distance = $mobile ? height : width
-    const transition = lineupTransitions.outro(height, $mobile)
+    const transition = lineupTransitions.outro(distance, $mobile)
     transition.finished.then(next)
   })
   
