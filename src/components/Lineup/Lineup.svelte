@@ -5,6 +5,7 @@
 
 	import lineupTransitions from '../../transitions/lineup'
   import Day from './Day/Day.svelte'
+  import { mobile } from '../../stores'
   
   let height, width, outro
 
@@ -28,7 +29,8 @@
 
   page.exit('/lineup', (ctx, next) => {
     outro = true
-    const transition = lineupTransitions.outro(width)
+    const distance = $mobile ? height : width
+    const transition = lineupTransitions.outro(height, $mobile)
     transition.finished.then(next)
   })
   
@@ -122,6 +124,11 @@
 
     .button-letter {
       margin: 30px 10px;
+    }
+
+    .header-container.outro {
+      border-left: none;
+      border-top: 4px solid aliceblue;
     }
   }
 </style>
