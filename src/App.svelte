@@ -156,7 +156,7 @@
 
 	@media (max-width: 1200px) {
 		:global(html) {
-			font-size: 70%;
+			font-size: 50%;
 		}
 
 		.page-container {
