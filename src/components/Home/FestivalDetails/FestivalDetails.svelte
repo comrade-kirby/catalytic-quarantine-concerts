@@ -87,6 +87,10 @@
   @media only screen and (max-width: 1200px) {
 		h5 {
       margin-top: 20px;
-		}
+    }
+    
+    .festival-details {
+      margin: 20px 20px 10px 20px;
+    }
   }
 </style>

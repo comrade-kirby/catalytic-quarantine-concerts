@@ -1,4 +1,7 @@
 <script>
+  import { onMount } from 'svelte'
+  import anime from 'animejs/lib/anime.es.js'
+
   import FestivalInfo from './FestivalInfo/FestivalInfo.svelte'
   import FestivalDetails from './FestivalDetails/FestivalDetails.svelte'
   import RightButton from './RightButton/RightButton.svelte'
@@ -6,6 +9,17 @@
   export let initialVisit
   
   let width, height
+
+  onMount(() => {
+    if (initialVisit) {
+      anime({
+        targets: '.catalytic-link',
+        opacity: [0, 1],
+        delay: 4500,
+        easing: 'easeInOutExpo'
+      });
+    }
+  })
 </script>
 
 <div class='home' bind:clientWidth={width} bind:clientHeight={height}>
