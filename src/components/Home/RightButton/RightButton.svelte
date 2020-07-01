@@ -123,7 +123,7 @@
     opacity: 0;
   }
 
-  @media (max-width: 1200px) {
+  @media only screen and (max-width: 1200px) {
     .button-container {
       flex-direction: column;
       right: 0;
@@ -138,11 +138,11 @@
 	  .right-button {
       flex-direction: row;
       border-left: none;
-      border-top: 4px solid aliceblue;
+      border-top: 2px solid aliceblue;
     }
 
     .button-letter {
-      margin: 30px 10px;
+      margin: 15px 10px;
     }
 
     .hover-background-buffer {

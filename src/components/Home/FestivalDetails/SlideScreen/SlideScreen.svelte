@@ -49,7 +49,7 @@
     background-color: aliceblue;
   }
 
-  @media (max-width: 1200px) {
+  @media only screen and (max-width: 1200px) {
     .slide-screen {
       height: calc(100% + 120px);
       width: 100%;

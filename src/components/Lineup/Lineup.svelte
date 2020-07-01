@@ -107,7 +107,7 @@
     color: aliceblue;
   }
 
-  @media (max-width: 1200px) {
+  @media only screen and (max-width: 1200px) {
     .lineup {
       flex-direction: column;
     }
@@ -123,12 +123,12 @@
     }
 
     .button-letter {
-      margin: 30px 10px;
+      margin: 15px 10px;
     }
 
     .header-container.outro {
       border-left: none;
-      border-top: 4px solid aliceblue;
+      border-top: 2px solid aliceblue;
     }
   }
 </style>

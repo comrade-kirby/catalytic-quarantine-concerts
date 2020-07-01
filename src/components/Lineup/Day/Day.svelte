@@ -50,13 +50,12 @@
     flex-direction: column;
     background-color: aliceblue;
     border-radius: 5px;
-    padding: 20px 0px;
-    margin: 0 20px;
+    margin: 20px;
     max-width: 800px;
   }
 
   .day {
-    margin: 0 20px 20px;
+    margin: 20px;
     color: black;
     text-shadow: none;
     letter-spacing: 1rem;
@@ -84,13 +83,19 @@
     color: black;
   }
 
-  @media (max-width: 1200px) {
+  @media only screen and (max-width: 1200px) {
     .lineup-day {
       top: 0;
     }
+  }
+ 
+  @media only screen and (max-width: 500px) {
+    .lineup-day {
+      margin: 10px;
+    }
     
     .day {
-      margin: 0 20px 10px;
+      margin: 10px;
     }
 
     .artist {

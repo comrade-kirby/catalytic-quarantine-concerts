@@ -71,11 +71,11 @@
 	}
 
 	:global(h3) {
-		font-size: 3rem;
+		font-size: 2.5rem;
 	}
 	
 	:global(h4) {
-		font-size: 2.5rem;
+		font-size: 2rem;
 		font-family: var(--mono-1);
 	}
 	
@@ -91,7 +91,7 @@
 	}
 
 	:global(p) {
-		font-size: 1.15rem;
+		font-size: 1.25rem;
 		line-height: 2.25rem;
 	}
 
@@ -148,16 +148,13 @@
 		overflow: hidden;
 	}
 
-	@media (max-width: 1500px) {
+	@media only screen and (max-width: 1500px) {
 		:global(html) {
 			font-size: 80%;
 		}
 	}
 
-	@media (max-width: 1200px) {
-		:global(html) {
-			font-size: 50%;
-		}
+	@media only screen and (max-width: 1200px) {
 
 		.page-container {
 			margin: 0;
@@ -168,9 +165,13 @@
 		}
 	}
 
-	@media (max-width: 500px) {
+	@media only screen and (max-width: 500px) {
 		:global(html) {
 			font-size: 60%;
+		}
+
+		:global(h3) {
+			font-size: 1.5rem;
 		}
 	}
 </style>

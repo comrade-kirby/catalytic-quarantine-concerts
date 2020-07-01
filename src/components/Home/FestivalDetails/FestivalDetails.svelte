@@ -84,4 +84,10 @@
     color: midnightblue;
     border: 2px solid midnightblue;
   }
+
+  @media only screen and (max-width: 1200px) {
+		h5 {
+      margin-top: 20px;
+		}
+  }
 </style>
