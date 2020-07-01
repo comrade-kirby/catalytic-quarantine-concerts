@@ -168,7 +168,7 @@
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 500px) {
 		:global(html) {
 			font-size: 60%;
 		}

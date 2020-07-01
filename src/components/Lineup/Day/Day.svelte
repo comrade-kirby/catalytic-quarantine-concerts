@@ -52,6 +52,7 @@
     border-radius: 5px;
     padding: 20px 0px;
     margin: 0 20px;
+    max-width: 800px;
   }
 
   .day {
@@ -86,6 +87,10 @@
   @media (max-width: 1200px) {
     .lineup-day {
       top: 0;
+    }
+    
+    .day {
+      margin: 0 20px 10px;
     }
 
     .artist {
