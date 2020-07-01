@@ -41,5 +41,6 @@
     display: flex;
     flex: 1;
     background: aliceblue;
+    margin: -.1px;
   }
 </style>
