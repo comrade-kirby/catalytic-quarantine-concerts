@@ -38,6 +38,7 @@
 <style>
   .slide-screen {
     position: absolute;
+    top: 0;
     left: 0;
     height: 100%;
     width: calc(100% + 120px);
@@ -46,5 +47,12 @@
     align-items: flex-end;
     justify-content: flex-end;
     background-color: aliceblue;
+  }
+
+  @media (max-width: 1200px) {
+    .slide-screen {
+      height: calc(100% + 100px);
+      width: 100%;
+    }
   }
 </style>

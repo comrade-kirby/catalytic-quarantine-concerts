@@ -27,6 +27,7 @@
 
   .festival-content {
     display: flex;
+    flex: 1;
     flex-direction: row;
   }
 
