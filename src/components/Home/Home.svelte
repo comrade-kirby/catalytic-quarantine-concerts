@@ -9,9 +9,15 @@
 </script>
 
 <div class='home' bind:clientWidth={width} bind:clientHeight={height}>
-  <div class='festival-content'>
-    <FestivalInfo delay={1000} initialVisit={initialVisit} />
-    <FestivalDetails initialVisit={initialVisit} />
+  <div class='main'>
+    <div class='festival-content'>
+      <FestivalInfo delay={1000} initialVisit={initialVisit} />
+      <FestivalDetails initialVisit={initialVisit} />
+    </div>
+    <a class='catalytic-link outro-item festival-info-element' href=''>
+      catalytic home
+      <span class="material-icons">arrow_forward</span>
+    </a>  
   </div>
   <RightButton 
     delay={4200}
@@ -29,10 +35,27 @@
     background: linear-gradient(90deg, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%));
   }
 
+  .main {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
   .festival-content {
     display: flex;
     flex: 1;
     flex-direction: row;
+  }
+
+  .catalytic-link {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 20px;
+    text-shadow: none;
+    border-radius: 5px;
+    z-index: 1;
   }
 
   @media only screen and (max-width: 1200px) {

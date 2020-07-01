@@ -13,7 +13,7 @@
     <div class='festival-details-bottom'>
       <div class='donate'>
         <h5>$10/program suggested donation</h5>
-        <a href="" >donate</a>
+        <a href="" >donate<span class="material-icons">arrow_forward</span></a>
       </div>
       <p>Music, video, and live performances each day at 1 pm and 7 pm US Central Time. Discussion panel after each afternoon program.</p>
     </div>

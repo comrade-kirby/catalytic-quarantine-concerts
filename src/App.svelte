@@ -100,7 +100,19 @@
 		letter-spacing: .5rem;
     font-family: var(--mono-1);
     text-decoration: none;
+		display: flex;
+    background-color: aliceblue;
+		transition: background-color .3s ease-in-out;
 	}
+
+	:global(a:hover) {
+		text-decoration: none;
+		background-color: white
+	}
+
+ 	:global(span) {
+    text-shadow: none;
+  }
 
 	main {
 		position: relative;
