@@ -41,7 +41,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    width: calc(100% + 120px);
+    width: calc(100% + 130px);
     display: flex;
     flex: 1;
     align-items: flex-end;
@@ -51,7 +51,7 @@
 
   @media (max-width: 1200px) {
     .slide-screen {
-      height: calc(100% + 100px);
+      height: calc(100% + 120px);
       width: 100%;
     }
   }
