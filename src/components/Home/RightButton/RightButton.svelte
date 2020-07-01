@@ -9,8 +9,16 @@
   export let delay
   export let initialVisit
   export let homeWidth
+  export let homeHeight
 
   let height, width, clicked
+
+  const onClick = () => {
+    clicked = true
+    const home = $mobile ? homeHeight : homeWidth
+    const button = $mobile ? height : width
+    homeTransitions.outro(home, button, $mobile)
+  }
 
   onMount( async () => {
     await tick()
@@ -45,7 +53,7 @@
 </script>
 
 <div class='button-container' class:clicked>
-  <button on:click={() => {clicked = true; homeTransitions.outro(homeWidth, width)}}
+  <button on:click={onClick}
     class='right-button' 
     bind:clientWidth={width}
     bind:clientHeight={height}>
@@ -143,7 +151,8 @@
     }
 
     .button-container.clicked {
-      bottom: -20px;
+      bottom: 0;
+      right: 0;
     }
   }
 </style>

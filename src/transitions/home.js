@@ -2,7 +2,7 @@ import anime from 'animejs/lib/anime.es.js'
 import page from 'page'
 
 const transitions = {
-  outro: async (homeWidth, buttonWidth) => {
+  outro: async (home, button, mobile) => {
     const outroItems = document.querySelectorAll('.outro-item')
     
     anime({
@@ -20,12 +20,18 @@ const transitions = {
       ]
     })
 
-    const slide = anime({
+    const slideTransition = {
       targets: '.button-container',
-      translateX: -(homeWidth - buttonWidth),
       easing: 'easeInOutExpo',
-    })
+    }
 
+    if (mobile) {  
+      slideTransition.translateY = -(home - button)
+    } else {
+      slideTransition.translateX = -(home - button)
+    }
+    
+    const slide = anime(slideTransition)
     await slide.finished
     page('/lineup')
   }
