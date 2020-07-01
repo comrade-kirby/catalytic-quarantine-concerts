@@ -17,7 +17,7 @@
     <a class='catalytic-link outro-item festival-info-element' 
     href='https://catalyticsound.com/'
     target="_blank" rel="noopener noreferrer">
-      catalytic home
+      catalytic
       <span class="material-icons">arrow_forward</span>
     </a>  
   </div>
@@ -54,7 +54,6 @@
     position: absolute;
     right: 20px;
     top: 20px;
-    padding: 20px;
     text-shadow: none;
     border-radius: 5px;
     z-index: 1;
@@ -67,6 +66,11 @@
 
     .home {
       flex-direction: column;
+    }
+
+    .catalytic-link {
+      right: 10px;
+      top: 10px;
     }
   }
 </style>

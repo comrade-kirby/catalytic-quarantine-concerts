@@ -98,6 +98,7 @@
 	:global(a) {
     font-size: 1.5rem;
 		letter-spacing: .5rem;
+		padding: 20px;
     font-family: var(--mono-1);
     text-decoration: none;
 		display: flex;
@@ -184,6 +185,10 @@
 
 		:global(h3) {
 			font-size: 1.5rem;
+		}
+
+		:global(a) {
+			padding: 10px;
 		}
 	}
 </style>

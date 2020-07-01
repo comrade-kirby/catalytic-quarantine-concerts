@@ -79,7 +79,6 @@
   }
 
   a {
-    padding: 20px;
     text-shadow: none;
     color: midnightblue;
     border: 2px solid midnightblue;
