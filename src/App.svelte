@@ -1,12 +1,20 @@
 <script>
+	import { onMount } from 'svelte'
 	import page from 'page'
 	import Home from './components/Home/Home.svelte'
 	import Lineup from './components/Lineup/Lineup.svelte'
 	import Schedule from './components/Schedule/Schedule.svelte'
 	import Stage from './components/Stage/Stage.svelte'
 	import lineupTransitions from './transitions/lineup'
+	import { mobile } from './stores.js'
 
-	let currentPage, initialVisit
+	let currentPage, initialVisit, width
+	
+	const mobileBreakPoint = 1200
+
+	const setMobile = (width) => {
+		mobile.set(width < mobileBreakPoint)
+	}
 
 	page('/', (ctx) => {
 		if (ctx.state.visited) {
@@ -23,9 +31,11 @@
 	page('/stage', () => currentPage = Stage)
 
 	page.start()
+
+	$: setMobile(width)
 </script>
 
-<main>
+<main bind:clientWidth={width}>
 	<div class='app-container'>
 		<!-- <nav>
 			<a href='/'>Home</a>
@@ -144,7 +154,7 @@
 		overflow: hidden;
 	}
 
-	@media (max-width: 1100px) {
+	@media (max-width: 1200px) {
 		:global(html) {
 			font-size: 50%;
 		}
