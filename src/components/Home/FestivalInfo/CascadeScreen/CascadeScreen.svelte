@@ -6,7 +6,7 @@
 
   let height
 
-  const screenColumns = [...Array(30).keys()]
+  const screenColumns = [...Array(31).keys()]
 
   onMount(() => {
     const elements = document.querySelectorAll('.screen-column');
