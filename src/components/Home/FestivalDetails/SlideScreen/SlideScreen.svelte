@@ -1,25 +1,39 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount, tick } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
+  import { mobile } from '../../../../stores'
 
   export let delay
   export let initialVisit
-  let width
-
-  onMount(() => {
+  
+  let width, height
+  
+  onMount(async () => {
     if (initialVisit) {
-      anime({
+      await tick()
+
+      const transition = {
         targets: '.slide-screen',
-        translateX: width,
         delay: delay,
         easing: 'easeOutSine',
         duration: 300
-      })
+      }
+      
+      if ($mobile) {
+        transition.translateY = height
+      } else {
+        transition.translateX = width
+      }
+
+      anime(transition)
     }
   })
 </script>
 
-<div class='slide-screen' bind:clientWidth={width}></div>
+<div class='slide-screen'
+  bind:clientWidth={width}
+  bind:clientHeight={height}>
+</div>
 
 <style>
   .slide-screen {
