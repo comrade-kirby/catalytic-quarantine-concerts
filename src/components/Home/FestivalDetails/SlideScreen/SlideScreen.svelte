@@ -20,9 +20,9 @@
       }
       
       if ($mobile) {
-        transition.translateY = height
+        transition.translateY = height + 100
       } else {
-        transition.translateX = width
+        transition.translateX = width + 100
       }
 
       anime(transition)
@@ -38,8 +38,9 @@
 <style>
   .slide-screen {
     position: absolute;
+    left: 0;
     height: 100%;
-    width: 100%;
+    width: calc(100% + 120px);
     display: flex;
     flex: 1;
     align-items: flex-end;

@@ -34,5 +34,9 @@
     .festival-content {
       flex-direction: column;
     }
+
+    .home {
+      flex-direction: column;
+    }
   }
 </style>

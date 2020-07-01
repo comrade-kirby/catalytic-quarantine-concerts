@@ -32,7 +32,7 @@
   .festival-details {
     display: flex;
     flex-direction: column;
-    margin: 40px 185px 20px 40px;
+    margin: 40px 40px 20px 40px;
     padding: 20px;
     justify-content: center;
     background-color: aliceblue;

@@ -45,10 +45,9 @@
   
 <style>
   .button-container {
-    position: absolute;
+    position: relative;
     right: -20px;
     height: 100%;
-    overflow: hidden;
     display: flex;
     transition: right 0.3s ease-in-out;
   }
