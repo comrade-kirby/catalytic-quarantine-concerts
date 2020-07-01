@@ -14,7 +14,9 @@
       <FestivalInfo delay={1000} initialVisit={initialVisit} />
       <FestivalDetails initialVisit={initialVisit} />
     </div>
-    <a class='catalytic-link outro-item festival-info-element' href=''>
+    <a class='catalytic-link outro-item festival-info-element' 
+    href='https://catalyticsound.com/'
+    target="_blank" rel="noopener noreferrer">
       catalytic home
       <span class="material-icons">arrow_forward</span>
     </a>  
