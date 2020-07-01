@@ -5,15 +5,19 @@
 
   export let initialVisit
   
-  let width
+  let width, height
 </script>
 
-<div class='home' bind:clientWidth={width}>
+<div class='home' bind:clientWidth={width} bind:clientHeight={height}>
   <div class='festival-content'>
     <FestivalInfo delay={1000} initialVisit={initialVisit} />
     <FestivalDetails initialVisit={initialVisit} />
   </div>
-  <RightButton delay={4200} initialVisit={initialVisit} homeWidth={width} />
+  <RightButton 
+    delay={4200}
+    initialVisit={initialVisit}
+    homeWidth={width} 
+    homeHeight={height} />
 </div>
 
 <style>
@@ -27,6 +31,17 @@
 
   .festival-content {
     display: flex;
+    flex: 1;
     flex-direction: row;
+  }
+
+  @media (max-width: 1200px) {
+    .festival-content {
+      flex-direction: column;
+    }
+
+    .home {
+      flex-direction: column;
+    }
   }
 </style>

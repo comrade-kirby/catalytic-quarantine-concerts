@@ -1,40 +1,62 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount, tick } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
-	import homeTransitions from '../../../transitions/home'
+  import homeTransitions from '../../../transitions/home'
+  import { mobile } from '../../../stores'
+
 
 
   export let delay
   export let initialVisit
   export let homeWidth
+  export let homeHeight
 
-  let width, clicked
+  let height, width, clicked
 
-  onMount(() => {
+  const onClick = () => {
+    clicked = true
+    const home = $mobile ? homeHeight : homeWidth
+    const button = $mobile ? height : width
+    homeTransitions.outro(home, button, $mobile)
+  }
+
+  onMount( async () => {
+    await tick()
     const letters = document.querySelectorAll('.button-letter')
-    if (initialVisit) {
-      anime({
-        targets: '.button-container',
-        translateX: [width + 20, 0],
-        delay: delay,
-        easing: 'easeOutExpo',
-      })
+    
+    const containerTransition = {
+      targets: '.button-container',
+      delay: delay,
+      easing: 'easeOutExpo',
+    }
 
-      anime({
-        targets: letters,
-        translateX: [width + 20, 0],
-        opacity: [0, 1],
-        delay: anime.stagger(50, {start: delay, from: 'center'}),
-        easing: 'easeOutExpo'
-      })
+    const letterTransition = {
+      targets: letters,
+      opacity: [0, 1],
+      delay: anime.stagger(50, {start: delay, from: 'center'}),
+      easing: 'easeOutExpo'
+    }
+
+    if ($mobile) {
+      containerTransition.translateY = [innerHeight + 20, 0]
+      letterTransition.translateY = [innerHeight + 20, 0]
+    } else {
+      containerTransition.translateX = [width + 20, 0]
+      letterTransition.translateX = [width + 20, 0]
+    }
+
+    if (initialVisit) {
+      anime(containerTransition)
+      anime(letterTransition)
     }
   })
 </script>
 
 <div class='button-container' class:clicked>
-  <button on:click={() => {clicked = true; homeTransitions.outro(homeWidth, width)}}
+  <button on:click={onClick}
     class='right-button' 
-    bind:clientWidth={width}>
+    bind:clientWidth={width}
+    bind:clientHeight={height}>
     {#each "LINEUP".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
@@ -45,10 +67,8 @@
   
 <style>
   .button-container {
-    position: absolute;
+    position: relative;
     right: -20px;
-    height: 100%;
-    overflow: hidden;
     display: flex;
     transition: right 0.3s ease-in-out;
   }
@@ -101,5 +121,38 @@
 
   .button-container.clicked .hover-background-buffer {
     opacity: 0;
+  }
+
+  @media (max-width: 1200px) {
+    .button-container {
+      flex-direction: column;
+      right: 0;
+      bottom: -20px;
+      transition: bottom 0.3s ease-in-out;
+    }
+
+    .button-container:hover {
+      bottom: 0;
+    }
+
+	  .right-button {
+      flex-direction: row;
+      border-left: none;
+      border-top: 4px solid aliceblue;
+    }
+
+    .button-letter {
+      margin: 30px 10px;
+    }
+
+    .hover-background-buffer {
+      min-height: 20px;
+      width: 100%;
+    }
+
+    .button-container.clicked {
+      bottom: -20px;
+      right: 0;
+    }
   }
 </style>

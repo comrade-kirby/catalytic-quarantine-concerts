@@ -11,22 +11,32 @@ const transitions = {
       easing: 'easeInOutExpo',
     })
   },
-  outro: (width) => {
-    anime({
+  outro: (distance, mobile) => {
+    const rotateTransition = {
       targets: '.lineup-day-container',
-      translateX: 100,
-      rotateY: 110,
       opacity: 0,
       delay: anime.stagger(100, {from: 'first'}),
       easing: 'easeInOutExpo',
-    })
+    }
     
-    return anime({
+    const slideTransition = {
       targets: '.header-container',
-      translateX: width,
       delay: 300,
       easing: 'easeInOutExpo',
-    })
+    }
+
+    if (mobile) {
+      rotateTransition.translateY = 100
+      rotateTransition.rotateX = 110
+      slideTransition.translateY = distance
+    } else {
+      rotateTransition.translateX = 100
+      rotateTransition.rotateY = 110
+      slideTransition.translateX = distance
+    }
+
+    anime(rotateTransition)
+    return anime(slideTransition)
   }
 }
 
