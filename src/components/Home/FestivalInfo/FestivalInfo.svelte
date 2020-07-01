@@ -10,8 +10,10 @@
 
   export let delay
   export let initialVisit
+  let mounted
 
   onMount(() => {
+    mounted = true
     if (!initialVisit) {
       const elements = document.querySelectorAll('.festival-info-element')
 
@@ -32,7 +34,7 @@
     <Year delay={delay + 1700} initialVisit={initialVisit} />
   </div>
   <Date delay={delay + 1500} initialVisit={initialVisit} />
-  {#if initialVisit}
+  {#if initialVisit && mounted}
     <CascadeScreen delay={delay} />
   {/if}
 </div>
