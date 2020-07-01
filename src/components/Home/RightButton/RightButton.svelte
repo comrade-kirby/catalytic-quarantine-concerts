@@ -151,7 +151,7 @@
     }
 
     .button-container.clicked {
-      bottom: 0;
+      bottom: 0px;
       right: 0;
     }
   }

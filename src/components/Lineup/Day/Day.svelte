@@ -1,7 +1,7 @@
 <script>
   import { onMount } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
-
+  
   export let index
   export let delay
   export let day
@@ -81,5 +81,11 @@
 
   .darker { 
     color: black;
+  }
+
+  @media (max-width: 1200px) {
+    .lineup-day {
+      top: 0;
+    }
   }
 </style>

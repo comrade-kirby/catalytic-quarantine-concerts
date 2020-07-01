@@ -105,4 +105,23 @@
     color: aliceblue;
   }
 
+  @media (max-width: 1200px) {
+    .lineup {
+      flex-direction: column;
+    }
+
+    .header-container {
+      flex-direction: row;
+      height: unset;
+      width: 100%;
+    }
+
+    .lineup-content {
+      flex-direction: column;
+    }
+
+    .button-letter {
+      margin: 30px 10px;
+    }
+  }
 </style>
