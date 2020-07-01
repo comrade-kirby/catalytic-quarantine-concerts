@@ -132,7 +132,7 @@
     }
 
     .button-container:hover {
-      bottom: 0px;
+      bottom: 0;
     }
 
 	  .right-button {
@@ -146,12 +146,12 @@
     }
 
     .hover-background-buffer {
-      height: 20px;
+      min-height: 20px;
       width: 100%;
     }
 
     .button-container.clicked {
-      bottom: 0px;
+      bottom: -20px;
       right: 0;
     }
   }
