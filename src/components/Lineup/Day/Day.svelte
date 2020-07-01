@@ -87,5 +87,9 @@
     .lineup-day {
       top: 0;
     }
+
+    .artist {
+      margin: 5px 10px;
+    }
   }
 </style>
