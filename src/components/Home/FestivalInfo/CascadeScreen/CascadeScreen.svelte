@@ -1,5 +1,5 @@
 <script>
-  import { onMount } from 'svelte'
+  import { onMount, tick } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
   
   export let delay
@@ -8,6 +8,7 @@
   const screenColumns = [...Array(31).keys()]
 
   onMount(() => {
+    tick()
     const elements = document.querySelectorAll('.screen-column');
 
     anime({
