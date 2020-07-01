@@ -3,8 +3,7 @@
   import anime from 'animejs/lib/anime.es.js'
   
   export let delay
-
-  let height
+  export let height
 
   const screenColumns = [...Array(31).keys()]
 
@@ -21,7 +20,7 @@
 </script>
 
 
-<div class='screen' bind:clientHeight={height}>
+<div class='screen'>
   {#each screenColumns as column}
     <div class='screen-column'></div>
   {/each}

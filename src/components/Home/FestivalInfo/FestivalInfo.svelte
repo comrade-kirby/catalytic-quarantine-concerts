@@ -10,10 +10,9 @@
 
   export let delay
   export let initialVisit
-  let mounted
+  let height
 
   onMount(() => {
-    mounted = true
     if (!initialVisit) {
       const elements = document.querySelectorAll('.festival-info-element')
 
@@ -27,15 +26,15 @@
   })
 </script>
 
-<div class='festival-info' >
+<div class='festival-info' bind:clientHeight={height}>
   <CatalyticSound delay={delay + 300} initialVisit={initialVisit} />
   <div class='festival2020-container'>
     <Festival delay={delay + 600} initialVisit={initialVisit} />
     <Year delay={delay + 1700} initialVisit={initialVisit} />
   </div>
   <Date delay={delay + 1500} initialVisit={initialVisit} />
-  {#if initialVisit && mounted}
-    <CascadeScreen delay={delay} />
+  {#if initialVisit && height}
+    <CascadeScreen delay={delay} height={height} />
   {/if}
 </div>
 
