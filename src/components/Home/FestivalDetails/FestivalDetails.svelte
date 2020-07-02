@@ -39,6 +39,7 @@
     justify-content: center;
     background-color: aliceblue;
     border-radius: 5px;
+    max-width: 750px;
   }
 
   .festival-details-bottom {
