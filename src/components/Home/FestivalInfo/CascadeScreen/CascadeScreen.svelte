@@ -12,7 +12,7 @@
 
     anime({
       targets: elements,
-      translateY: height,
+      translateY: height + 5,
       delay: anime.stagger(10, {start: delay, from: 'last'}),
       easing: 'easeInOutExpo'
     })
