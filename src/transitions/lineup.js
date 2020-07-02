@@ -19,6 +19,16 @@ const transitions = {
       easing: 'easeInOutExpo',
     }
     
+    const gradientRotation = mobile ? '180deg' : '90deg'
+    const homeTransition = {
+      targets: '.lineup',
+      background: [
+        `linear-gradient(${gradientRotation}, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%))`,
+        `linear-gradient(${gradientRotation}, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%))`
+      ],
+      delay: 400
+    }
+
     const slideTransition = {
       targets: '.header-container',
       delay: 300,
@@ -36,6 +46,7 @@ const transitions = {
     }
 
     anime(rotateTransition)
+    anime(homeTransition)
     return anime(slideTransition)
   }
 }
