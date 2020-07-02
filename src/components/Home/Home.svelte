@@ -29,8 +29,7 @@
       <FestivalDetails initialVisit={initialVisit} />
     </div>
     <a class='catalytic-link outro-item festival-info-element' 
-    href='https://catalyticsound.com/'
-    target="_blank" rel="noopener noreferrer">
+    href='https://catalyticsound.com/'>
       catalytic
       <span class="material-icons">arrow_forward</span>
     </a>  

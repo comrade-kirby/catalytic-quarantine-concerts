@@ -13,7 +13,7 @@
     <div class='festival-details-bottom'>
       <div class='donate'>
         <h5>$10/program suggested donation</h5>
-        <a href="" >donate
+        <a href="" target="_blank" rel="noopener noreferrer">donate
         <!-- <span class="material-icons">arrow_forward</span> -->
         </a>
       </div>
