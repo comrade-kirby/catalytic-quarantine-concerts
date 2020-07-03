@@ -4,8 +4,6 @@
   import homeTransitions from '../../../transitions/home'
   import { mobile } from '../../../stores'
 
-
-
   export let delay
   export let initialVisit
   export let homeWidth
