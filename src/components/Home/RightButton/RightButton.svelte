@@ -82,6 +82,7 @@
     border-left: 5px solid aliceblue;
     background-color: rgba(0, 0, 0, 35%);
     transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
   }
 
   .button-letter {
