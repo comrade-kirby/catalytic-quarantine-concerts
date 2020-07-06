@@ -184,7 +184,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 500px) {
+	@media only screen and (max-width: 600px) {
 		:global(html) {
 			font-size: 60%;
 		}

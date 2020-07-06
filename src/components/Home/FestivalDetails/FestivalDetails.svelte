@@ -1,6 +1,7 @@
 <script>
   import SlideScreen from './SlideScreen/SlideScreen.svelte'
-  
+  import MailChimp from './MailChimp/MailChimp.svelte'
+  import PayPal from './PayPal/PayPal.svelte'
   export let initialVisit
 </script>
 
@@ -13,14 +14,12 @@
     <div class='festival-details-bottom'>
       <div class='donate'>
         <h5>$10/program suggested donation</h5>
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-          <input type="hidden" name="cmd" value="_s-xclick" />
-          <input type="hidden" name="hosted_button_id" value="4E7FLHV355X9E" />
-          <input class='donate-img' type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
-          <img  alt="paypal donate button" src="https://www.paypal.com/en_US/i/scr/pixel.gif" />
-        </form>
+        <PayPal />
       </div>
+      <div class='festival-details-bottom-right'>
       <p>Music, video, and live performances each day at 1 pm and 7 pm US Central Time. Discussion panel after each afternoon program.</p>
+      <MailChimp />
+      </div>
     </div>
   </div>
 </div>
@@ -57,6 +56,12 @@
     flex: 1;
   }
 
+  .festival-details-bottom-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   h3 {
     color: steelblue;
     text-shadow: none;
@@ -84,15 +89,6 @@
     padding: 20px;
   }
 
-  form {
-    border: 2px solid midnightblue;
-  }
-
-  .donate-img {
-    width: 100%;
-    margin: 0;
-    border: none;
-  }
   @media only screen and (max-width: 1200px) {
 		h5 {
       margin-top: 20px;
