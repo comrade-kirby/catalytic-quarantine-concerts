@@ -35,7 +35,7 @@
   .letter {
     position: relative;
     top: -20px;
-    font-family: var(--sans-serif-2);
+    font-family: var(--sans-serif-1);
     margin-right: 8px;
   }
 </style>

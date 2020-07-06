@@ -87,7 +87,7 @@
   .button-letter {
     margin: 10px 30px;
     color: aliceblue;
-    font-family: var(--mono-1);
+    font-family: var(--sans-serif-2);
     transition: color 0.3s ease-in-out;
   }
 

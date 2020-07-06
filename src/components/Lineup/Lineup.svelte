@@ -87,7 +87,7 @@
     margin: 10px 30px;
     color: black;
     text-shadow: none;
-    font-family: var(--mono-1);
+    font-family: var(--sans-serif-2);
     transition: color 1s ease-in-out 0.45s;
   }
 

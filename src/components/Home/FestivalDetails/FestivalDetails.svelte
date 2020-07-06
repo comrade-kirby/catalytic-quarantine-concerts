@@ -59,7 +59,7 @@
     text-shadow: none;
     text-align: justify;
     letter-spacing: 0.25rem;
-    font-family: var(--sans-serif-2);
+    font-family: var(--sans-serif-1);
   }
 
   p {
@@ -76,7 +76,7 @@
     background-color: midnightblue;
     color: aliceblue;
     text-align: justify;
-    font-family: var(--sans-serif-2);
+    font-family: var(--sans-serif-1);
     text-justify: inter-character;
     padding: 20px;
   }

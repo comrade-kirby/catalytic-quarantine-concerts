@@ -53,9 +53,15 @@
 
 
 <style>
+	@font-face {
+		font-family: 'AlteHaasGroteskRegular';
+		src: url('/AlteHaasGroteskRegular.ttf');
+		font-weight: 500;
+	}
+
 	:global(body) {
+    --sans-serif-1: 'AlteHaasGroteskRegular', sans-serif;
     --sans-serif-2: 'Quicksand', sans-serif;
-    --mono-1: 'Share Tech Mono', monospace;
 	}
 
 	:global(*) {
@@ -76,13 +82,13 @@
 	
 	:global(h4) {
 		font-size: 2rem;
-		font-family: var(--mono-1);
+		font-family: var(--sans-serif-2);
 	}
 	
 	:global(h5) {
 		font-size: 1.5rem;
 		line-height: 2rem;
-		font-family: var(--sans-serif-2);
+		font-family: var(--sans-serif-1);
 	}
 	
 	:global(h6) {
@@ -99,7 +105,7 @@
     font-size: 1.5rem;
 		letter-spacing: .5rem;
 		padding: 20px;
-    font-family: var(--mono-1);
+    font-family: var(--sans-serif-2);
     text-decoration: none;
 		display: flex;
     background-color: aliceblue;

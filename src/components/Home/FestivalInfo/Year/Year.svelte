@@ -54,6 +54,6 @@
  }
 
  .twenty {
-    font-family: var(--mono-1);
+    font-family: var(--sans-serif-2);
  }
 </style>
