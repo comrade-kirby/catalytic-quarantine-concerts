@@ -64,6 +64,10 @@
   }
 
   .catalytic-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     right: 20px;
     top: 20px;

@@ -52,8 +52,4 @@
     flex-direction: row;
     margin-bottom: 63px;
  }
-
- .twenty {
-    font-family: var(--sans-serif-2);
- }
 </style>

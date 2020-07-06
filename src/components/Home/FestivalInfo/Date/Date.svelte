@@ -40,12 +40,10 @@
 
   .dates-month {
     position: absolute;
-    font-family: var(--sans-serif-2);
     z-index: 1;
   }
 
   .date-placeholder {
-    font-family: var(--sans-serif-2);
     opacity: 0;
   }
 </style>

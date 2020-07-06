@@ -62,6 +62,7 @@
 	:global(body) {
     --sans-serif-1: 'AlteHaasGroteskRegular', sans-serif;
     --sans-serif-2: 'Quicksand', sans-serif;
+    --cursive: 'DM Mono', monospace;
 	}
 
 	:global(*) {
@@ -69,7 +70,8 @@
 	}
 	
 	:global(h1) {
-		font-size: 7rem;
+		font-size: 6rem;
+		font-family: var(--sans-serif-2);
 	}
 
 	:global(h2) {
@@ -77,12 +79,13 @@
 	}
 
 	:global(h3) {
-		font-size: 2.5rem;
+		font-size: 2rem;
+		font-family: var(--cursive);
 	}
 	
 	:global(h4) {
 		font-size: 2rem;
-		font-family: var(--sans-serif-2);
+		font-family: var(--sans-serif-1);
 	}
 	
 	:global(h5) {
@@ -99,13 +102,14 @@
 	:global(p) {
 		font-size: 1.25rem;
 		line-height: 2.25rem;
+		font-family: var(--sans-serif-2);
 	}
 
 	:global(a) {
     font-size: 1.5rem;
 		letter-spacing: .5rem;
 		padding: 20px;
-    font-family: var(--sans-serif-2);
+    font-family: var(--cursive);
     text-decoration: none;
 		display: flex;
     background-color: aliceblue;
