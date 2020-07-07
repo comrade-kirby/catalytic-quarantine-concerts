@@ -3,7 +3,6 @@
 	import page from 'page'
 	import Home from './components/Home/Home.svelte'
 	import Lineup from './components/Lineup/Lineup.svelte'
-	import Schedule from './components/Schedule/Schedule.svelte'
 	import Stage from './components/Stage/Stage.svelte'
 	import lineupTransitions from './transitions/lineup'
 	import { mobile } from './stores.js'

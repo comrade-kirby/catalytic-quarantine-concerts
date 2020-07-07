@@ -90,9 +90,14 @@
     flex: 1;
     justify-content: space-evenly;
     height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
   }
 
   .lineup-day-container {
+    display: flex;
+    justify-content: center;
     padding: 20px;
   }
 
@@ -108,7 +113,7 @@
   @media only screen and (max-width: 1200px) {
     .lineup {
       flex-direction: column;
-      overflow: scroll;
+      /* overflow: scroll; */
     }
 
     .header-container {

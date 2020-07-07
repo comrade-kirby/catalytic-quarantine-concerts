@@ -78,8 +78,6 @@
     flex-wrap: wrap;
   }
 
-  
-
   @media only screen and (max-width: 1200px) {
     .lineup-day {
       top: 0;
