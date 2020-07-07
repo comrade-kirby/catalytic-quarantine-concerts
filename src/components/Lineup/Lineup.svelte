@@ -14,9 +14,10 @@
   const days = ['Friday', 'Saturday', 'Sunday']
 
   const parseSchedule = async () => {
-    fetch('schedule.json')
-    .then(response => response.json())
-    .then(json => schedules = Object.keys(json).map(key => json[key]))
+    const response = await fetch('schedule.json')
+    const json = await response.json()
+    schedules = Object.keys(json).map(key => json[key])
+    return
   }
 
   page.exit('/lineup', (ctx, next) => {
@@ -27,7 +28,7 @@
   })
   
   onMount(async () => {
-    parseSchedule()
+    await parseSchedule()
     lineupTransitions.intro(width)
   })
 </script>
