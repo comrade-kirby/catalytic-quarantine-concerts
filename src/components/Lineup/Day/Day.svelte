@@ -5,8 +5,8 @@
   export let index
   export let delay
   export let day
+  export let schedule
   export let yOffset = 500
-  export let artists
   
   let height
 
@@ -31,13 +31,15 @@
   style='--y-offset:{calcYOffset(yOffset, height)}px'>
   <h4 class='day'>{day}</h4>
   <div class='artists'>
-    {#each artists as artist, i}
-      <h6
-        class='artist artist{index}' 
-        class:lighter={i % 3 == 1}
-        class:darker={i % 3 == 2}>
-        {artist}
-      </h6>
+    {#each schedule as artist, i}
+      {#if artist.type == 'Set'}
+        <h6
+          class='artist artist{index}' 
+          class:lighter={i % 3 == 1}
+          class:darker={i % 3 == 2}>
+          {artist.act}
+        </h6>
+      {/if}
     {/each}
   </div>
 </div>

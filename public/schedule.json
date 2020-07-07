@@ -1,0 +1,296 @@
+{
+  "Fri": [
+    {
+      "act": "Terrie Ex / Ab Baars / Ig Henneman",
+      "start_time": "1",
+      "end_time": "1:30",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "1:30",
+      "end_time": "1:35",
+      "type": "Video"
+    },
+    {
+      "act": "Jaap Blonk",
+      "start_time": "1:35",
+      "end_time": "1:55",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "1:55",
+      "end_time": "2",
+      "type": "Video"
+    },
+    {
+      "act": "Ken Vandermark",
+      "start_time": "2",
+      "end_time": "2:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "2:20",
+      "end_time": "2:25",
+      "type": "Video"
+    },
+    {
+      "act": "Paal Nilssen-Love / Frode Gjerstad",
+      "start_time": "2:25",
+      "end_time": "2:55",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "2:55",
+      "end_time": "3",
+      "type": "Video"
+    },
+    {
+      "act": "Panel 1 (Art/Music) with John Corbett, Ben Hall, Bonnie Jones. Moderated by Kim Alpert.",
+      "start_time": "3",
+      "end_time": "4",
+      "type": "Panel"
+    },
+    {
+      "act": "Sylvie Courvoisier",
+      "start_time": "7",
+      "end_time": "7:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "7:20",
+      "end_time": "7:25",
+      "type": "Video"
+    },
+    {
+      "act": "Brandon Lopez",
+      "start_time": "7:25",
+      "end_time": "7:45",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "7:45",
+      "end_time": "7:50",
+      "type": "Video"
+    },
+    {
+      "act": "Nate Wooley / Ikue Mori",
+      "start_time": "7:50",
+      "end_time": "8:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Kim Alpert",
+      "start_time": "8:20",
+      "end_time": "8:25",
+      "type": "Video"
+    },
+    {
+      "act": "Fred Lonberg-Holm / Joe McPhee",
+      "start_time": "8:25",
+      "end_time": "8:55",
+      "type": "Set"
+    }
+  ],
+  "Sat": [
+    {
+      "act": "Elisabeth Harnik",
+      "start_time": "1",
+      "end_time": "1:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "1:20",
+      "end_time": "1:25",
+      "type": "Video"
+    },
+    {
+      "act": "Icepick (Corsano / Håker Flaten / Wooley)",
+      "start_time": "1:25",
+      "end_time": "1:55",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "1:55",
+      "end_time": "2",
+      "type": "Video"
+    },
+    {
+      "act": "Mats Gustafsson",
+      "start_time": "2",
+      "end_time": "2:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "2:20",
+      "end_time": "2:25",
+      "type": "Video"
+    },
+    {
+      "act": "Terrie Ex / Andy Moor",
+      "start_time": "2:25",
+      "end_time": "2:55",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "2:55",
+      "end_time": "3",
+      "type": "Video"
+    },
+    {
+      "act": "Panel 2 (DIY/Funding) with Terrie Ex, Luke Stewart, Joe Morris. Moderated by Olivia Junell.",
+      "start_time": "3",
+      "end_time": "4",
+      "type": "Panel"
+    },
+    {
+      "act": "Tim Daisy & Dave Rempis (30 minutes)",
+      "start_time": "7",
+      "end_time": "7:30",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "7:30",
+      "end_time": "7:35",
+      "type": "Video"
+    },
+    {
+      "act": "Luke Stewart with film by Patrick Cain",
+      "start_time": "7:35",
+      "end_time": "7:55",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "7:55",
+      "end_time": "8",
+      "type": "Video"
+    },
+    {
+      "act": "Joe McPhee",
+      "start_time": "8",
+      "end_time": "8:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Patrick Cain",
+      "start_time": "8:20",
+      "end_time": "8:25",
+      "type": "Video"
+    },
+    {
+      "act": "Marker",
+      "start_time": "8:25",
+      "end_time": "8:55",
+      "type": "Set"
+    }
+  ],
+  "Sun": [
+    {
+      "act": "Chris Corsano",
+      "start_time": "1",
+      "end_time": "1:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "1:20",
+      "end_time": "1:25",
+      "type": "Video"
+    },
+    {
+      "act": "Susan Alcorn / Macie Stewart / Tim Daisy",
+      "start_time": "1:30",
+      "end_time": "2",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "1",
+      "end_time": "2:05",
+      "type": "Video"
+    },
+    {
+      "act": "Ingebrigt Håker Flaten / Håkon Kornstad",
+      "start_time": "2:05",
+      "end_time": "2:35",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "2:35",
+      "end_time": "2:40",
+      "type": "Video"
+    },
+    {
+      "act": "Mats Gustafsson / Jaap Blonk / Fred Lonberg-Holm",
+      "start_time": "2:40",
+      "end_time": "3:10",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "3:10",
+      "end_time": "3:15",
+      "type": "Video"
+    },
+    {
+      "act": "Panel 3 (Where Are We Going?) with Andy Moor, Macie Stewart, Joe McPhee, Paal Nilssen-Love, Nate Wooley. Moderated by Ken Vandermark",
+      "start_time": "3:15",
+      "end_time": "4:15",
+      "type": "Panel"
+    },
+    {
+      "act": "Ikue Mori",
+      "start_time": "7",
+      "end_time": "7:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "7:20",
+      "end_time": "7:25",
+      "type": "Video"
+    },
+    {
+      "act": "Claire Rousay",
+      "start_time": "7:25",
+      "end_time": "7:45",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "7:45",
+      "end_time": "7:50",
+      "type": "Video"
+    },
+    {
+      "act": "Ben Hall / Bonnie Jones / Luke Stewart",
+      "start_time": "7:50",
+      "end_time": "8:20",
+      "type": "Set"
+    },
+    {
+      "act": "Video by Federico Peñalva",
+      "start_time": "8:20",
+      "end_time": "8:25",
+      "type": "Video"
+    },
+    {
+      "act": "Joe Morris",
+      "start_time": "8:25",
+      "end_time": "8:45",
+      "type": "Set"
+    }
+  ]
+}

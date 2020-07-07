@@ -8,24 +8,16 @@
   import { mobile } from '../../stores'
   
   let height, width, outro
+  let schedules = []
 
-  const lineupDays = [
-    {
-      day: 'FRIDAY',
-      yOffset: 0.5,
-      artists: ['Terrie Ex / Ab Baars / Ig Henneman', 'Jaap Blonk', 'Ken Vandermark', 'Paal Nilssen-Love / Frode Gjerstad', 'Sylvie Courvoisier', 'Brandon Lopez', 'Nate Wooley / Ikue Mori', 'Fred Lonberg-Holm / Joe McPhee']
-    },
-    {
-      day: 'SATURDAY',
-      yOffset: 0.7,
-      artists: ['Elisabeth Harnik', 'Icepick (Corsano / Håker Flaten / Wooley)', 'Claire Rousay / Mats Gustafsson', 'Terrie Ex / Andy Moor', 'Tim Daisy & Dave Rempis', 'Luke Stewart', 'McPhee', 'Marker']
-    },
-    {
-      day: 'SUNDAY',
-      yOffset: 0.35,
-      artists: ['Chris Corsano', 'Susan Alcorn / Macie Stewart / Tim Daisy', 'Ingebrigt Håker Flaten / Håkon Kornstad', 'Mats Gustafsson / Jaap Blonk / Fred Lonberg-Holm', 'Ikue Mori', 'Claire Rousay', 'Ben Hall / Bonnie Jones / Luke Stewart', 'Joe Morris']
-    }
-  ]
+  const yOffsets = [0.5, 0.7, 0.35]
+  const days = ['Friday', 'Saturday', 'Sunday']
+
+  const parseSchedule = async () => {
+    fetch('schedule.json')
+    .then(response => response.json())
+    .then(json => schedules = Object.keys(json).map(key => json[key]))
+  }
 
   page.exit('/lineup', (ctx, next) => {
     outro = true
@@ -34,7 +26,8 @@
     transition.finished.then(next)
   })
   
-  onMount(() => {
+  onMount(async () => {
+    parseSchedule()
     lineupTransitions.intro(width)
   })
 </script>
@@ -49,14 +42,14 @@
   <div class='lineup-content' 
   bind:clientHeight={height}
   bind:clientWidth={width}>
-    {#each lineupDays as lineupDay, i}
+    {#each schedules as schedule, i}
       <div class='lineup-day-container'>
         <Day 
           index={i}
           delay={i*200 + 450}
-          day={lineupDay.day} 
-          yOffset={lineupDay.yOffset * height}
-          artists={lineupDay.artists} />
+          day={days[i]} 
+          schedule={schedule}
+          yOffset={yOffsets[i] * height} />
       </div>
     {/each}
   </div>
