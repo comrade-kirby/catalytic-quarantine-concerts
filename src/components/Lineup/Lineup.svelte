@@ -47,7 +47,7 @@
       <div class='lineup-day-container'>
         <Day 
           index={i}
-          delay={i*200 + 450}
+          delay={200}
           day={days[i]} 
           schedule={schedule}
           yOffset={yOffsets[i] * height} />
@@ -95,7 +95,7 @@
   .lineup-day-container {
     padding: 20px;
   }
-  
+
   .header-container.outro {
     background-color: rgba(0, 0, 0, 35%);
     border-left: 5px solid aliceblue;
