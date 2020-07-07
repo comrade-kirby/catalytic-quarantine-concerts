@@ -159,6 +159,7 @@
 		max-height: 100%;
 		margin: 20px;
 		flex: 1;
+		overflow: hidden;
 	}
 
 	.background-container {

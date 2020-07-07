@@ -92,6 +92,10 @@
     height: 100%;
   }
 
+  .lineup-day-container {
+    padding: 20px;
+  }
+  
   .header-container.outro {
     background-color: rgba(0, 0, 0, 35%);
     border-left: 5px solid aliceblue;

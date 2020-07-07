@@ -30,6 +30,7 @@
 <div 
   class='lineup-day' 
   bind:clientHeight={height}
+  class:open
   on:click={() => open = !open}
   style='--y-offset:{calcYOffset(yOffset, height)}px'>
   <h4 class='day'>{day}</h4>
@@ -56,7 +57,6 @@
     flex-direction: column;
     background-color: aliceblue;
     border-radius: 5px;
-    margin: 20px;
     max-width: 800px;
   }
 
@@ -103,6 +103,12 @@
     text-shadow: none;
     margin: 10px 20px;
     text-align: center;
+  }
+
+  .open {
+    top: 0;
+    max-height: 100%;
+    overflow-y: scroll;
   }
 
   .open .row {
