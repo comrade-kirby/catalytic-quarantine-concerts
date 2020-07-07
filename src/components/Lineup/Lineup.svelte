@@ -69,6 +69,7 @@
   .header-container {
     display: flex;
     height: 100%;
+    z-index: 1;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -103,12 +104,15 @@
   @media only screen and (max-width: 1200px) {
     .lineup {
       flex-direction: column;
+      overflow: scroll;
     }
 
     .header-container {
       flex-direction: row;
       height: unset;
       width: 100%;
+      position: sticky;
+      top: 0;
     }
 
     .lineup-content {
