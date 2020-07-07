@@ -1,5 +1,7 @@
 <script>
   import { onMount } from 'svelte'
+  import { fade } from 'svelte/transition'
+
   import anime from 'animejs/lib/anime.es.js'
   
   export let index
@@ -9,6 +11,7 @@
   export let yOffset = 500
   
   let height
+  let open = false
 
   const calcYOffset = (yOffset, height) => {
     return yOffset - (height / 2)
@@ -28,17 +31,23 @@
 <div 
   class='lineup-day' 
   bind:clientHeight={height}
+  on:click={() => open = !open}
   style='--y-offset:{calcYOffset(yOffset, height)}px'>
   <h4 class='day'>{day}</h4>
-  <div class='artists'>
-    {#each schedule as artist, i}
-      {#if artist.type == 'Set'}
-        <h6
-          class='artist artist{index}' 
-          class:lighter={i % 3 == 1}
-          class:darker={i % 3 == 2}>
-          {artist.act}
-        </h6>
+  <div class='rows' class:open>
+    {#each schedule as row, i}
+      {#if (row.type == 'Set' || open) }
+        <div class='row' transition:fade >
+          {#if open}
+            <h6 class='start-time'>{row.start_time}</h6>
+          {/if}
+          <h6
+            class='artist artist{index}' 
+            class:lighter={i % 3 == 1}
+            class:darker={i % 3 == 2}>
+            {row.act}
+          </h6>
+        </div>
       {/if}
     {/each}
   </div>
@@ -63,11 +72,29 @@
     letter-spacing: 1rem;
   }
   
-  .artists {
+  .rows {
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+  }
+
+  .open {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .start-time {
+    text-shadow: none;
+    color: black;
+    margin: 10px 20px;
+    min-width: 30px;
   }
 
   .artist {
@@ -75,6 +102,10 @@
     text-shadow: none;
     margin: 10px 20px;
     text-align: center;
+  }
+
+  .open .artist {
+    text-align: left;
   }
 
   .lighter { 
