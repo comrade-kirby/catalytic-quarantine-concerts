@@ -30,7 +30,7 @@
     </div>
     <a class='catalytic-link outro-item festival-info-element' 
     href='https://catalyticsound.com/'>
-      catalytic
+      merch
       <span class="material-icons">arrow_forward</span>
     </a>  
   </div>
