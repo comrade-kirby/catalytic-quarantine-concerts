@@ -1,22 +1,27 @@
 <script>
+  import Duration from './Duration/Duration.svelte'
+  
   export let row
   export let open  
   export let index
   export let dayIndex
 </script>
 
-
 <div 
   class='row' 
   class:open
   class:visible={row.type == 'Set' || open}>
-  <h6 class='start-time'>{row.start_time}</h6>
+  <div class='time'>
+    <h6 class='start-time'>{row.start_time}</h6>
+    <Duration row={row} open={open} />
+  </div>
   <h6
     class='artist artist{dayIndex}' 
     class:lighter={index % 3 == 1}
     class:darker={index % 3 == 2}>
     {row.act}
   </h6>
+  
 </div>
 
 <style>
@@ -35,6 +40,12 @@
     transition: 0.3s ease-in-out;
   }
 
+  .time {
+    max-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
   .start-time {
     max-width: 0;
     max-height: 0;
@@ -42,7 +53,7 @@
     color: black;
     opacity: 0;
     transform: scale(0);
-    transition: 0.1s ease-in-out;
+    transition: 0s ease-in-out;
   }
 
   .artist {
@@ -65,11 +76,14 @@
     text-align: left;
   }
 
+  .open .time {
+    margin: 10px 20px;
+  }
+
   .open .start-time {
     max-width: unset;
     max-height: unset;
     min-width: 40px;
-    margin: 10px 20px;
     opacity: 1;
     transform: scale(1);
     transition: 0.3s ease-in-out;
