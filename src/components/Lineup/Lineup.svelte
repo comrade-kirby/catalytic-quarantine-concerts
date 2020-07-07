@@ -96,8 +96,6 @@
   }
 
   .lineup-day-container {
-    display: flex;
-    justify-content: center;
     padding: 20px;
   }
 

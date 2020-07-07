@@ -56,6 +56,7 @@
     background-color: aliceblue;
     border-radius: 5px;
     max-width: 800px;
+    margin: auto;
   }
 
   .open {
