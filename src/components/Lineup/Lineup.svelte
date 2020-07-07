@@ -111,7 +111,6 @@
   @media only screen and (max-width: 1200px) {
     .lineup {
       flex-direction: column;
-      /* overflow: scroll; */
     }
 
     .header-container {
@@ -124,6 +123,7 @@
 
     .lineup-content {
       flex-direction: column;
+      justify-content: flex-start;
     }
 
     .button-letter {
