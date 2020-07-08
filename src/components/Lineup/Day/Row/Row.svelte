@@ -2,7 +2,7 @@
   import Duration from './Duration/Duration.svelte'
   
   export let row
-  export let open  
+  export let open
   export let index
   export let dayIndex
 </script>
@@ -42,6 +42,7 @@
 
   .time {
     max-width: 0;
+    max-height: 0;
     display: flex;
     flex-direction: column;
   }
@@ -54,6 +55,7 @@
     opacity: 0;
     transform: scale(0);
     transition: 0s ease-in-out;
+    font-family: var(--cursive);
   }
 
   .artist {
@@ -74,10 +76,13 @@
 
   .open .artist {
     text-align: left;
+    margin: 0;
   }
 
   .open .time {
-    margin: 10px 20px;
+    max-height: unset;
+    max-width: unset;
+    margin-right: 20px;
   }
 
   .open .start-time {
@@ -95,5 +100,11 @@
 
   .darker { 
     color: black;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .artist {
+      margin: 5px 10px;
+    }
   }
 </style>

@@ -135,4 +135,10 @@
       border-top: 2px solid aliceblue;
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    .lineup-day-container {
+      padding: 10px;
+    }
+  }
 </style>

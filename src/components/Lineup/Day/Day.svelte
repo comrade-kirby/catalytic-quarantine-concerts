@@ -56,6 +56,7 @@
     background-color: aliceblue;
     border-radius: 5px;
     max-width: 800px;
+    padding: 20px;
     margin: auto;
   }
 
@@ -66,7 +67,7 @@
   }
 
   .day {
-    margin: 20px;
+    margin-bottom: 20px;
     color: black;
     text-shadow: none;
     letter-spacing: 1rem;
@@ -79,6 +80,10 @@
     flex-wrap: wrap;
   }
 
+  .open .rows {
+    justify-content: flex-start;
+  }
+
   @media only screen and (max-width: 1200px) {
     .lineup-day {
       top: 0;
@@ -87,15 +92,12 @@
  
   @media only screen and (max-width: 500px) {
     .lineup-day {
-      margin: 10px;
+      margin: 0;
+      padding: 10px;
     }
     
     .day {
       margin: 10px;
-    }
-
-    .artist {
-      margin: 5px 10px;
     }
   }
 </style>
