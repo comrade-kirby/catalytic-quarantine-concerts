@@ -60,7 +60,9 @@
       {/each}
     {/if}
   </div>
-    <h6 class='number'>{duration}m</h6>
+    {#if duration}
+      <h6 class='number'>{duration}m</h6>
+    {/if}
 </div>
 
 <style>
@@ -72,7 +74,6 @@
     opacity: 0;
     transform: translateY(-40px);
     transition: 0s;
-    margin-left: 2px;
   }
 
   .open {

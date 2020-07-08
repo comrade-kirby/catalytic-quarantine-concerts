@@ -91,7 +91,7 @@
     justify-content: space-evenly;
     height: 100%;
     width: 100%;
-    overflow-y: scroll;
+    overflow-y: hidden;
     overflow-x: hidden;
   }
 
@@ -124,6 +124,7 @@
     .schedule-content {
       flex-direction: column;
       justify-content: flex-start;
+      overflow-y: scroll;
     }
 
     .button-letter {
