@@ -3,7 +3,7 @@
   export let open
 
   const labelText = (open) => {
-    return open ? 'CLOSE' : 'OPEN'
+    return open ? 'CLOSE' : 'SCHEDULE'
   }
 
   const hoverTranslate = (open) => {

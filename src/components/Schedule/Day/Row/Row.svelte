@@ -16,9 +16,7 @@
     <Duration row={row} open={open} />
   </div>
   <h6
-    class='artist artist{dayIndex}' 
-    class:lighter={index % 3 == 1}
-    class:darker={index % 3 == 2}>
+    class='artist artist{dayIndex}' >
     {row.act}
   </h6>
   
@@ -59,7 +57,8 @@
   }
 
   .artist {
-    color: midnightblue;
+    /* color: midnightblue; */
+    color: steelblue;
     text-shadow: none;
     margin: 10px 20px;
     text-align: center;
@@ -92,14 +91,6 @@
     opacity: 1;
     transform: scale(1);
     transition: 0.3s ease-in-out;
-  }
-
-  .lighter { 
-    color: steelblue;
-  }
-
-  .darker { 
-    color: black;
   }
 
   @media only screen and (max-width: 600px) {
