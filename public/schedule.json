@@ -4,109 +4,127 @@
       "act": "Terrie Ex / Ab Baars / Ig Henneman",
       "start_time": "1",
       "end_time": "1:30",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Terrie Ex", "Ab Baars", "Ig Henneman"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "1:30",
       "end_time": "1:35",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Jaap Blonk",
       "start_time": "1:35",
       "end_time": "1:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Jaap Blonk"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "1:55",
       "end_time": "2",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Ken Vandermark",
       "start_time": "2",
       "end_time": "2:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Ken Vandermark"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "2:20",
       "end_time": "2:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Paal Nilssen-Love / Frode Gjerstad",
       "start_time": "2:25",
       "end_time": "2:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Paal Nilssen-Love", "Frode Gjerstad"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "2:55",
       "end_time": "3",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Panel 1 (Art/Music) with John Corbett, Ben Hall, Bonnie Jones. Moderated by Kim Alpert.",
       "start_time": "3",
       "end_time": "4",
-      "type": "Panel"
+      "type": "Panel",
+      "artists": ["John Corbett", "Ben Hall", "Bonnie Jones"]
     },
     {
       "act": "Break",
       "start_time": "4",
       "end_time": "7",
-      "type": "Break"
+      "type": "Break",
+      "artists": null
     },
     {
       "act": "Sylvie Courvoisier",
       "start_time": "7",
       "end_time": "7:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Sylvie Courvoisier"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "7:20",
       "end_time": "7:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Brandon Lopez",
       "start_time": "7:25",
       "end_time": "7:45",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Brandon Lopez"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "7:45",
       "end_time": "7:50",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Nate Wooley / Ikue Mori",
       "start_time": "7:50",
       "end_time": "8:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Nate Wooley", "Ikue Mori"]
     },
     {
       "act": "Video by Kim Alpert",
       "start_time": "8:20",
       "end_time": "8:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Kim Alpert"]
     },
     {
       "act": "Fred Lonberg-Holm / Joe McPhee",
       "start_time": "8:25",
       "end_time": "8:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Fred Lonberg-Holm", "Joe McPhee"]
     },
     {
       "act": "End",
       "start_time": "8:55",
       "end_time": "8:55",
-      "type": "Break"
+      "type": "Break",
+      "artists": null
     }
   ],
   "Sat": [
@@ -114,19 +132,22 @@
       "act": "Elisabeth Harnik",
       "start_time": "1",
       "end_time": "1:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Elisabeth Harnik"]
     },
     {
       "act": "Video by Patrick Cain",
       "start_time": "1:20",
       "end_time": "1:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Icepick (Corsano / Håker Flaten / Wooley)",
       "start_time": "1:25",
       "end_time": "1:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Chris Corsano", "Håker Flaten", "Nate Wooley"]
     },
     {
       "act": "Video by Patrick Cain",
@@ -144,79 +165,92 @@
       "act": "Video by Patrick Cain",
       "start_time": "2:20",
       "end_time": "2:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Terrie Ex / Andy Moor",
       "start_time": "2:25",
       "end_time": "2:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Terrie Ex", "Andy Moor"]
     },
     {
       "act": "Video by Patrick Cain",
       "start_time": "2:55",
       "end_time": "3",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Panel 2 (DIY/Funding) with Terrie Ex, Luke Stewart, Joe Morris. Moderated by Olivia Junell.",
       "start_time": "3",
       "end_time": "4",
-      "type": "Panel"
+      "type": "Panel",
+      "artists": ["Terrie Ex", "Luke Stewart", "Joe Morris", "Olivia Junell"]
     },
     {
       "act": "Break",
       "start_time": "4",
       "end_time": "7",
-      "type": "Break"
+      "type": "Break",
+      "artists": null
     },
     {
       "act": "Tim Daisy & Dave Rempis",
       "start_time": "7",
       "end_time": "7:30",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Tim Daisy", "Dave Rempis"]
     },
     {
       "act": "Video by Patrick Cain",
       "start_time": "7:30",
       "end_time": "7:35",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Luke Stewart with film by Patrick Cain",
       "start_time": "7:35",
       "end_time": "7:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Luke Stewart", "Patrick Cain"]
     },
     {
       "act": "Video by Patrick Cain",
       "start_time": "7:55",
       "end_time": "8",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Joe McPhee",
       "start_time": "8",
       "end_time": "8:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Joe McPhee"]
     },
     {
       "act": "Video by Patrick Cain",
       "start_time": "8:20",
       "end_time": "8:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Marker",
       "start_time": "8:25",
       "end_time": "8:55",
-      "type": "Set"
+      "type": "Set",
+      "artists": null
     },
     {
       "act": "End",
       "start_time": "8:55",
       "end_time": "8:55",
-      "type": "Break"
+      "type": "Break",
+      "artists": null
     }
   ],
   "Sun": [
@@ -224,109 +258,127 @@
       "act": "Chris Corsano",
       "start_time": "1",
       "end_time": "1:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Chris Corsano"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "1:20",
       "end_time": "1:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Susan Alcorn / Macie Stewart / Tim Daisy",
       "start_time": "1:30",
       "end_time": "2",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Susan Alcorn", "Macie Stewart", "Tim Daisy"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "2",
       "end_time": "2:05",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Ingebrigt Håker Flaten / Håkon Kornstad",
       "start_time": "2:05",
       "end_time": "2:35",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Ingebrigt Håker Flaten", "Håkon Kornstad"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "2:35",
       "end_time": "2:40",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Mats Gustafsson / Jaap Blonk / Fred Lonberg-Holm",
       "start_time": "2:40",
       "end_time": "3:10",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Mats Gustafsson", "Jaap Blonk", "Fred Lonberg-Holm"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "3:10",
       "end_time": "3:15",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Panel 3 (Where Are We Going?) with Andy Moor, Macie Stewart, Joe McPhee, Paal Nilssen-Love, Nate Wooley. Moderated by Ken Vandermark",
       "start_time": "3:15",
       "end_time": "4:15",
-      "type": "Panel"
+      "type": "Panel",
+      "artists": ["Andy Moor", "Macie Stewart", "Joe McPhee", "Paal Nilssen-Love", "Nate Wooley", "Ken Vandermark"]
     },
     {
       "act": "Break",
       "start_time": "4:15",
       "end_time": "7",
-      "type": "Break"
+      "type": "Break",
+      "artists": null
     },
     {
       "act": "Ikue Mori",
       "start_time": "7",
       "end_time": "7:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Ikue Mori"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "7:20",
       "end_time": "7:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Claire Rousay",
       "start_time": "7:25",
       "end_time": "7:45",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Claire Rousay"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "7:45",
       "end_time": "7:50",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Ben Hall / Bonnie Jones / Luke Stewart",
       "start_time": "7:50",
       "end_time": "8:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Ben Hall", "Bonnie Jones", "Luke Stewart"]
     },
     {
       "act": "Video by Federico Peñalva",
       "start_time": "8:20",
       "end_time": "8:25",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Federico Peñalva"]
     },
     {
       "act": "Joe Morris",
       "start_time": "8:25",
       "end_time": "8:45",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Joe Morris"]
     },
     {
       "act": "End",
       "start_time": "8:45",
       "end_time": "8:45",
-      "type": "Break"
+      "type": "Break",
+      "artists": null
     }
   ]
 }
