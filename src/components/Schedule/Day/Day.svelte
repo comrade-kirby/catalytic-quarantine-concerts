@@ -49,6 +49,7 @@
 <div 
   class='schedule-day-container'
   class:open >
+  {#if schedule && bios}
   <div 
     class='schedule-day' 
     bind:clientHeight={height}
@@ -60,7 +61,6 @@
       hover={hover}
       open={open} />
     <h4 class='day'>{day}</h4>
-    {#if schedule && bios}
       <div class='rows' class:open>
         {#each schedule as row, i}
           <Row 
@@ -71,8 +71,8 @@
             toggleOpen={toggleOpen} />
         {/each}
       </div>
-    {/if}
-  </div>
+    </div>
+  {/if}
 </div>
 
 <style>

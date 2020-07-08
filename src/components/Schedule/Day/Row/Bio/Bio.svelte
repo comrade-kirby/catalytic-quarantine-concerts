@@ -27,5 +27,6 @@
     text-shadow: none;
     color: black;
     font-size: 1rem;
+    white-space: pre-line;
   }
 </style>
