@@ -103,6 +103,7 @@
 
   .artist:hover {
     text-decoration: underline;
+    cursor: pointer;
   }
 
   .festivalBreak {
