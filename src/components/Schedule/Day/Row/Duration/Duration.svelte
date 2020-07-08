@@ -41,29 +41,33 @@
 <div 
   class='duration'
   class:open >
-  {#if fives}
-    {#each hours as hour}
-      <svg viewBox='0 0 4 60' xmlns='http://www.w3.org/2000/svg'>
-        <rect width='4' height='60' />
-      </svg>
-    {/each}
-    {#each fifteens as fifteen}
-      <svg viewBox='0 0 4 15' xmlns='http://www.w3.org/2000/svg'>
-        <rect width='4' height='15' />
-      </svg>
-    {/each}
-    {#each fives as five}
-     <svg viewBox='0 0 4 5' xmlns='http://www.w3.org/2000/svg'>
-        <rect width='4' height='5' />
-      </svg>
-    {/each}
-  {/if}
+  <div class='dashes'>
+    {#if fives}
+      {#each hours as hour}
+        <svg viewBox='0 0 4 50' xmlns='http://www.w3.org/2000/svg'>
+          <rect width='4' height='50' />
+        </svg>
+      {/each}
+      {#each fifteens as fifteen}
+        <svg viewBox='0 0 4 20' xmlns='http://www.w3.org/2000/svg'>
+          <rect width='4' height='20' />
+        </svg>
+      {/each}
+      {#each fives as five}
+      <svg viewBox='0 0 4 7' xmlns='http://www.w3.org/2000/svg'>
+          <rect width='4' height='7' />
+        </svg>
+      {/each}
+    {/if}
+  </div>
+    <h6 class='number'>{duration}m</h6>
 </div>
 
 <style>
   .duration {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     overflow: hidden;
     opacity: 0;
     transform: translateY(-40px);
@@ -77,8 +81,23 @@
     transform: translateY(0px);
   }
 
+  .dashes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+
   svg {
     width: 4px;
     margin: 2px;
+    fill: midnightblue;
+  }
+
+  .number {
+    text-shadow: none;
+    color: steelblue;
+    font-size: 10px;
+    margin-left: 5px;
   }
 </style>

@@ -88,7 +88,7 @@
   .open .start-time {
     max-width: unset;
     max-height: unset;
-    min-width: 40px;
+    min-width: 50px;
     opacity: 1;
     transform: scale(1);
     transition: 0.3s ease-in-out;
