@@ -46,14 +46,14 @@
   }
 
   .label-vertical {
-    margin-top: -6px;
+    margin-top: -8px;
     margin-right: -8px;
     writing-mode: vertical-rl;
     transform: translateY(calc(-1 * var(--off-hover)));
   }
 
   .label-horizontal {
-    margin-right: 12px;
+    margin-right: 17px;
     margin-top: -8px;
     transform: translateX(var(--off-hover));
   }
