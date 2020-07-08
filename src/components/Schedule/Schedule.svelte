@@ -9,7 +9,7 @@
 
   let height, width, outro
   let schedules = []
-  let bios = {}
+  let bios
 
   const yOffsets = [0.5, 0.7, 0.35]
   const days = ['Friday', 'Saturday', 'Sunday']
@@ -55,6 +55,7 @@
         delay={200}
         day={days[i]}
         schedule={schedule}
+        bios={bios}
         yOffset={yOffsets[i] * height} />
     {/each}
   </div>

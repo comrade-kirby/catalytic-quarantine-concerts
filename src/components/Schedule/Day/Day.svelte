@@ -10,6 +10,7 @@
   export let delay
   export let day
   export let schedule
+  export let bios
   export let yOffset = 500
   
   let height
@@ -22,6 +23,16 @@
   
   const toggleOpen = () => {
     open = !open
+  }
+
+  const findArtistBios = (row, bios) => {
+    const artists = row.artists
+    if (artists) {
+      const artistBios = artists.map(artist => {
+        return { name: artist, bio: bios[artist] }
+       })
+      return artistBios
+    }
   }
 
   onMount(() => {
@@ -49,15 +60,18 @@
       hover={hover}
       open={open} />
     <h4 class='day'>{day}</h4>
-    <div class='rows' class:open>
-      {#each schedule as row, i}
-        <Row 
-          row={row} 
-          open={open}
-          dayIndex={dayIndex}
-          toggleOpen={toggleOpen} />
-      {/each}
-    </div>
+    {#if schedule && bios}
+      <div class='rows' class:open>
+        {#each schedule as row, i}
+          <Row 
+            row={row} 
+            open={open}
+            dayIndex={dayIndex}
+            artistBios={findArtistBios(row, bios)}
+            toggleOpen={toggleOpen} />
+        {/each}
+      </div>
+    {/if}
   </div>
 </div>
 

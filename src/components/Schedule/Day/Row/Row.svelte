@@ -7,6 +7,7 @@
   export let row
   export let open
   export let dayIndex
+  export let artistBios
   export let toggleOpen
 
   let festivalBreak = false
@@ -43,7 +44,9 @@
       {row.act}
     </h6>
     {#if bioOpen}
-      <Bio />
+      {#each artistBios as bio}
+        <Bio bio={bio} />
+      {/each}
     {/if}
   </div>
 </div>
@@ -123,7 +126,7 @@
   .open .time {
     max-height: unset;
     max-width: unset;
-    margin-right: 20px;
+    margin-right: 15px;
   }
 
   .open .start-time {

@@ -1,10 +1,12 @@
 <script>
-  // export let
+  export let bio
 </script>
 
 <div class='bio'>
-  <h6 class='name'>Artist Name</h6>
-  <p class='description'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores perspiciatis dolorum, nihil neque, eligendi repellendus architecto cumque ea quasi ipsum fugiat repudiandae iure dignissimos esse aliquam id voluptatibus, voluptate deserunt.</p>
+  <h6 class='name'>{bio.name}</h6>
+  {#if bio.bio }
+    <p class='description'>{bio.bio}</p>
+  {/if}
 </div>
 
 <style>
@@ -18,6 +20,7 @@
     text-shadow: none;
     color: black;
     font-family: var(--cursive);
+    font-size: 1.2rem;
   }
 
   .description {
