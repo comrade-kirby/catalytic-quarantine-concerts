@@ -35,7 +35,6 @@
   onMount(async () => {
     schedules = await parseSchedule()
     bios = await parseBios()
-    console.log(schedules, bios)
     scheduleTransitions.intro(width)
   })
 </script>
