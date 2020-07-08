@@ -30,7 +30,7 @@
 </script>
 
 <div 
-  class='lineup-day' 
+  class='schedule-day' 
   bind:clientHeight={height}
   class:open
   on:click={() => open = !open}
@@ -48,7 +48,7 @@
 </div>
 
 <style>
- .lineup-day {
+ .schedule-day {
     position: relative;
     top: var(--y-offset);
     display: flex;
@@ -80,18 +80,14 @@
     flex-wrap: wrap;
   }
 
-  .open .rows {
-    justify-content: flex-start;
-  }
-
   @media only screen and (max-width: 1200px) {
-    .lineup-day {
+    .schedule-day {
       top: 0;
     }
   }
  
   @media only screen and (max-width: 500px) {
-    .lineup-day {
+    .schedule-day {
       margin: 0;
       padding: 10px;
     }

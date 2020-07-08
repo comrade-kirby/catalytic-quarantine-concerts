@@ -34,7 +34,7 @@ const transitions = {
     
     const slide = anime(slideTransition)
     await slide.finished
-    page('/lineup')
+    page('/schedule')
   }
 }
 

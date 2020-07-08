@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte'
 	import page from 'page'
 	import Home from './components/Home/Home.svelte'
-	import Lineup from './components/Lineup/Lineup.svelte'
+	import Schedule from './components/Schedule/Schedule.svelte'
 	import Stage from './components/Stage/Stage.svelte'
-	import lineupTransitions from './transitions/lineup'
+	import scheduleTransitions from './transitions/schedule'
 	import { mobile } from './stores.js'
 
 	let currentPage, initialVisit, width
@@ -25,7 +25,6 @@
 		}
 		currentPage = Home
 	})
-	page('/lineup', () => currentPage = Lineup)
 	page('/schedule', () => currentPage = Schedule)
 	page('/stage', () => currentPage = Stage)
 
@@ -38,7 +37,7 @@
 	<div class='app-container'>
 		<!-- <nav>
 			<a href='/'>Home</a>
-			<a href='/schedule'>Schedule</a>
+			<a href='/Schedule'>Schedule</a>
 			<a href='/stage'>Stage</a>
 		</nav> -->
 		<div class='page-container'>

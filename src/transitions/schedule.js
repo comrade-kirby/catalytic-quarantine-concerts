@@ -3,7 +3,7 @@ import anime from 'animejs/lib/anime.es.js'
 const transitions = {
   intro: (width) => {
     anime({
-      targets: '.lineup-day-container',
+      targets: '.schedule-day-container',
       translateX: [width, 0],
       opacity: [0, 1],
       duration: 1000,
@@ -13,7 +13,7 @@ const transitions = {
   },
   outro: (distance, mobile) => {
     const rotateTransition = {
-      targets: '.lineup-day-container',
+      targets: '.schedule-day-container',
       opacity: 0,
       delay: anime.stagger(100, {from: 'first'}),
       easing: 'easeInOutExpo',
@@ -21,7 +21,7 @@ const transitions = {
     
     const gradientRotation = mobile ? '180deg' : '90deg'
     const homeTransition = {
-      targets: '.lineup',
+      targets: '.schedule',
       background: [
         `linear-gradient(${gradientRotation}, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%))`,
         `linear-gradient(${gradientRotation}, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%))`

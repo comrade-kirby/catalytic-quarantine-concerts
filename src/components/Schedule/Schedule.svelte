@@ -3,7 +3,7 @@
 	import page from 'page'
   import anime from 'animejs/lib/anime.es.js'
 
-	import lineupTransitions from '../../transitions/lineup'
+	import scheduleTransitions from '../../transitions/schedule'
   import Day from './Day/Day.svelte'
   import { mobile } from '../../stores'
   
@@ -20,31 +20,31 @@
     return
   }
 
-  page.exit('/lineup', (ctx, next) => {
+  page.exit('/schedule', (ctx, next) => {
     outro = true
     const distance = $mobile ? height : width
-    const transition = lineupTransitions.outro(distance, $mobile)
+    const transition = scheduleTransitions.outro(distance, $mobile)
     transition.finished.then(next)
   })
   
   onMount(async () => {
     await parseSchedule()
-    lineupTransitions.intro(width)
+    scheduleTransitions.intro(width)
   })
 </script>
 
 
-<div class='lineup'>
+<div class='schedule'>
   <div class='header-container' class:outro>
-    {#each "LINEUP".split("") as letter }
+    {#each "SCHEDULE".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
   </div>   
-  <div class='lineup-content' 
+  <div class='schedule-content' 
   bind:clientHeight={height}
   bind:clientWidth={width}>
     {#each schedules as schedule, i}
-      <div class='lineup-day-container'>
+      <div class='schedule-day-container'>
         <Day 
           index={i}
           delay={200}
@@ -57,7 +57,7 @@
 </div>
   
 <style>
-  .lineup {
+  .schedule {
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -85,7 +85,7 @@
     transition: color 1s ease-in-out 0.45s;
   }
 
-  .lineup-content {
+  .schedule-content {
     display: flex;
     flex: 1;
     justify-content: space-evenly;
@@ -95,7 +95,7 @@
     overflow-x: hidden;
   }
 
-  .lineup-day-container {
+  .schedule-day-container {
     padding: 20px;
   }
 
@@ -109,7 +109,7 @@
   }
 
   @media only screen and (max-width: 1200px) {
-    .lineup {
+    .schedule {
       flex-direction: column;
     }
 
@@ -121,7 +121,7 @@
       top: 0;
     }
 
-    .lineup-content {
+    .schedule-content {
       flex-direction: column;
       justify-content: flex-start;
     }
@@ -137,7 +137,7 @@
   }
 
   @media only screen and (max-width: 600px) {
-    .lineup-day-container {
+    .schedule-day-container {
       padding: 10px;
     }
   }

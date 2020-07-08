@@ -55,6 +55,12 @@
       "type": "Panel"
     },
     {
+      "act": "Break",
+      "start_time": "4",
+      "end_time": "7",
+      "type": "Break"
+    },
+    {
       "act": "Sylvie Courvoisier",
       "start_time": "7",
       "end_time": "7:20",
@@ -95,6 +101,12 @@
       "start_time": "8:25",
       "end_time": "8:55",
       "type": "Set"
+    },
+    {
+      "act": "End",
+      "start_time": "8:55",
+      "end_time": "8:55",
+      "type": "Break"
     }
   ],
   "Sat": [
@@ -153,6 +165,12 @@
       "type": "Panel"
     },
     {
+      "act": "Break",
+      "start_time": "4",
+      "end_time": "7",
+      "type": "Break"
+    },
+    {
       "act": "Tim Daisy & Dave Rempis (30 minutes)",
       "start_time": "7",
       "end_time": "7:30",
@@ -193,6 +211,12 @@
       "start_time": "8:25",
       "end_time": "8:55",
       "type": "Set"
+    },
+    {
+      "act": "End",
+      "start_time": "8:55",
+      "end_time": "8:55",
+      "type": "Break"
     }
   ],
   "Sun": [
@@ -251,6 +275,12 @@
       "type": "Panel"
     },
     {
+      "act": "Break",
+      "start_time": "4:15",
+      "end_time": "7",
+      "type": "Break"
+    },
+    {
       "act": "Ikue Mori",
       "start_time": "7",
       "end_time": "7:20",
@@ -291,6 +321,12 @@
       "start_time": "8:25",
       "end_time": "8:45",
       "type": "Set"
+    },
+    {
+      "act": "End",
+      "start_time": "8:45",
+      "end_time": "8:45",
+      "type": "Break"
     }
   ]
 }

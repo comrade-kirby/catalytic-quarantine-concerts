@@ -4,7 +4,7 @@
   export let open
   export let row
 
-  let duration, fifteens, fives
+  let duration, hours, fifteens, fives
 
   const getMinutes = (time) => {
     const hrsMnsArray = time.split(':')
@@ -23,9 +23,11 @@
   }
 
   const calcDashes = () => {
-    const numFifteens = Math.floor(duration / 15)
+    const numHours = Math.floor(duration / 60)
+    const numFifteens = Math.floor((duration % 60) / 15)
     const numFives = (duration % 15) / 5
 
+    hours = numHours ? [...Array(numHours).keys()] : []
     fifteens = numFifteens ? [...Array(numFifteens).keys()] : []
     fives = numFives ? [...Array(numFives).keys()] : []
   }
@@ -40,14 +42,19 @@
   class='duration'
   class:open >
   {#if fives}
+    {#each hours as hour}
+      <svg viewBox='0 0 4 60' xmlns='http://www.w3.org/2000/svg'>
+        <rect width='4' height='60' />
+      </svg>
+    {/each}
     {#each fifteens as fifteen}
-      <svg viewBox="0 0 4 20" xmlns="http://www.w3.org/2000/svg">
-        <rect width='4' height='20' />
+      <svg viewBox='0 0 4 15' xmlns='http://www.w3.org/2000/svg'>
+        <rect width='4' height='15' />
       </svg>
     {/each}
     {#each fives as five}
-     <svg viewBox="0 0 4 6" xmlns="http://www.w3.org/2000/svg">
-        <rect width='4' height='6' />
+     <svg viewBox='0 0 4 5' xmlns='http://www.w3.org/2000/svg'>
+        <rect width='4' height='5' />
       </svg>
     {/each}
   {/if}

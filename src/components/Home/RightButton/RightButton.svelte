@@ -55,7 +55,7 @@
     class='right-button' 
     bind:clientWidth={width}
     bind:clientHeight={height}>
-    {#each "LINEUP".split("") as letter }
+    {#each "SCHEDULE".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
   </button> 
