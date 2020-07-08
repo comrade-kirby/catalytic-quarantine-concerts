@@ -32,29 +32,36 @@
 </script>
 
 <div 
-  class='schedule-day' 
-  bind:clientHeight={height}
-  on:mouseenter={() => hover = true }
-  on:mouseleave={() => hover = false }
-  class:open
-  on:click={() => open = !open}
-  style='--y-offset:{calcYOffset(yOffset, height)}px'>
-  <ExpandButton 
-    hover={hover}
-    open={open} />
-  <h4 class='day'>{day}</h4>
-  <div class='rows' class:open>
-    {#each schedule as row, i}
-      <Row 
-        row={row} 
-        open={open}
-        index={i} 
-        dayIndex={dayIndex} />
-    {/each}
+  class='schedule-day-container'
+  class:open >
+  <div 
+    class='schedule-day' 
+    bind:clientHeight={height}
+    on:mouseenter={() => hover = true }
+    on:mouseleave={() => hover = false }
+    on:click={() => open = !open}
+    style='--y-offset:{calcYOffset(yOffset, height)}px'>
+    <ExpandButton 
+      hover={hover}
+      open={open} />
+    <h4 class='day'>{day}</h4>
+    <div class='rows' class:open>
+      {#each schedule as row, i}
+        <Row 
+          row={row} 
+          open={open}
+          index={i} 
+          dayIndex={dayIndex} />
+      {/each}
+    </div>
   </div>
 </div>
 
 <style>
+  .schedule-day-container {
+    margin: 20px;
+  }
+
  .schedule-day {
     position: relative;
     top: var(--y-offset);
@@ -65,11 +72,6 @@
     max-width: 800px;
     padding: 20px;
     margin: auto;
-  }
-
-  .open {
-    top: 0;
-    max-height: 100%;
   }
 
   .day {
@@ -85,6 +87,15 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
+  .open {
+    margin: 10px;
+  }
+
+  .open .schedule-day {
+    top: 0;
+    max-height: 100%;
+  }
   
   .open .rows {
     overflow-y: scroll;
@@ -96,7 +107,11 @@
     }
   }
  
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
+    .schedule-day-container {
+      margin: 10px;
+    }
+    
     .schedule-day {
       margin: 0;
       padding: 10px;

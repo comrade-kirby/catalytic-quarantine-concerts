@@ -44,14 +44,12 @@
   bind:clientHeight={height}
   bind:clientWidth={width}>
     {#each schedules as schedule, i}
-      <div class='schedule-day-container'>
         <Day 
           index={i}
           delay={200}
           day={days[i]} 
           schedule={schedule}
           yOffset={yOffsets[i] * height} />
-      </div>
     {/each}
   </div>
 </div>
@@ -95,10 +93,6 @@
     overflow-x: hidden;
   }
 
-  .schedule-day-container {
-    padding: 20px;
-  }
-
   .header-container.outro {
     background-color: rgba(0, 0, 0, 35%);
     border-left: 5px solid aliceblue;
@@ -134,12 +128,6 @@
     .header-container.outro {
       border-left: none;
       border-top: 2px solid aliceblue;
-    }
-  }
-
-  @media only screen and (max-width: 600px) {
-    .schedule-day-container {
-      padding: 10px;
     }
   }
 </style>

@@ -76,7 +76,7 @@
 
   .open .artist {
     text-align: left;
-    margin: 0;
+    margin: 0 0 10px;
   }
 
   .open .time {
