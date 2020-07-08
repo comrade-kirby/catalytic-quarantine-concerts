@@ -4,7 +4,8 @@
   import anime from 'animejs/lib/anime.es.js'
 
   import Row from './Row/Row.svelte'
-
+  import ExpandButton from './ExpandButton/ExpandButton.svelte'
+  
   export let dayIndex
   export let delay
   export let day
@@ -13,6 +14,7 @@
   
   let height
   let open = false
+  let hover = false
 
   const calcYOffset = (yOffset, height) => {
     return yOffset - (height / 2)
@@ -32,9 +34,14 @@
 <div 
   class='schedule-day' 
   bind:clientHeight={height}
+  on:mouseenter={() => hover = true }
+  on:mouseleave={() => hover = false }
   class:open
   on:click={() => open = !open}
   style='--y-offset:{calcYOffset(yOffset, height)}px'>
+  <ExpandButton 
+    hover={hover}
+    open={open} />
   <h4 class='day'>{day}</h4>
   <div class='rows' class:open>
     {#each schedule as row, i}
@@ -63,7 +70,6 @@
   .open {
     top: 0;
     max-height: 100%;
-    overflow-y: scroll;
   }
 
   .day {
@@ -79,7 +85,11 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-
+  
+  .open .rows {
+    overflow-y: scroll;
+  }
+  
   @media only screen and (max-width: 1200px) {
     .schedule-day {
       top: 0;

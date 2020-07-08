@@ -67,6 +67,10 @@
 		text-shadow: 2px 2px 1px black;
 	}
 	
+	:global(button:active) {
+		border: none;
+	}
+
 	:global(h1) {
 		font-size: 6rem;
 		font-family: var(--sans-serif-2);
