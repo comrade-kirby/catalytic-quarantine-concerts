@@ -44,12 +44,12 @@
   bind:clientHeight={height}
   bind:clientWidth={width}>
     {#each schedules as schedule, i}
-        <Day 
-          index={i}
-          delay={200}
-          day={days[i]} 
-          schedule={schedule}
-          yOffset={yOffsets[i] * height} />
+      <Day 
+        index={i}
+        delay={200}
+        day={days[i]} 
+        schedule={schedule}
+        yOffset={yOffsets[i] * height} />
     {/each}
   </div>
 </div>

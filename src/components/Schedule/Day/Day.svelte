@@ -20,6 +20,10 @@
     return yOffset - (height / 2)
   }
   
+  const toggleOpen = () => {
+    open = !open
+  }
+
   onMount(() => {
     anime({
       targets: `.artist${dayIndex}`,
@@ -39,7 +43,7 @@
     bind:clientHeight={height}
     on:mouseenter={() => hover = true }
     on:mouseleave={() => hover = false }
-    on:click={() => open = !open}
+    on:click={toggleOpen}
     style='--y-offset:{calcYOffset(yOffset, height)}px'>
     <ExpandButton 
       hover={hover}
@@ -50,8 +54,8 @@
         <Row 
           row={row} 
           open={open}
-          index={i} 
-          dayIndex={dayIndex} />
+          dayIndex={dayIndex}
+          toggleOpen={toggleOpen} />
       {/each}
     </div>
   </div>
@@ -63,7 +67,6 @@
   }
 
  .schedule-day {
-    position: relative;
     top: var(--y-offset);
     display: flex;
     flex-direction: column;

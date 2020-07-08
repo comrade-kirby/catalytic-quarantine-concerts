@@ -1,10 +1,30 @@
 <script>
+  import { onMount } from 'svelte'
+
   import Duration from './Duration/Duration.svelte'
-  
+  import Bio from './Bio/Bio.svelte'
+
   export let row
   export let open
-  export let index
   export let dayIndex
+  export let toggleOpen
+
+  let festivalBreak = false
+
+  let bioOpen = false
+
+  const isABreak = (type) => {
+    return ['Video', 'Break'].includes(type)
+  }
+
+  const artistClicked = () => {
+    if (!open) { toggleOpen() }
+    bioOpen = !bioOpen
+  }
+
+  onMount(() => {
+    festivalBreak = isABreak(row.type)
+  })
 </script>
 
 <div 
@@ -15,11 +35,17 @@
     <h6 class='start-time'>{row.start_time}</h6>
     <Duration row={row} open={open} />
   </div>
-  <h6
-    class='artist artist{dayIndex}' >
-    {row.act}
-  </h6>
-  
+  <div class='artist-and-bios'>
+    <h6
+      class='artist artist{dayIndex}' 
+      class:festivalBreak
+      on:click|stopPropagation={artistClicked} >
+      {row.act}
+    </h6>
+    {#if bioOpen}
+      <Bio />
+    {/if}
+  </div>
 </div>
 
 <style>
@@ -28,14 +54,16 @@
     max-width: 0;
     max-height: 0;
     opacity: 0;
-    transition: 0s;
+    transform: scaleX(0);
+    transition: opacity 0s;
   }
 
   .visible {
     max-width: unset;
     max-height: unset;
     opacity: 1;
-    transition: 0.3s ease-in-out;
+    transform: scaleX(1);
+    transition: opacity 0.3s ease-in-out;
   }
 
   .time {
@@ -56,14 +84,28 @@
     font-family: var(--cursive);
   }
 
+  .artist-and-bios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px 10px 0;
+  }
+
   .artist {
-    /* color: midnightblue; */
-    color: steelblue;
+    align-self: flex-start;
+    color: midnightblue;
     text-shadow: none;
-    margin: 10px 20px;
     text-align: center;
   }
 
+  .artist:hover {
+    text-decoration: underline;
+  }
+
+  .festivalBreak {
+    color: black;
+    font-size: 1rem;
+  }
   .open {
     width: 100%;
   }
