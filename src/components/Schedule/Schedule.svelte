@@ -6,9 +6,10 @@
 	import scheduleTransitions from '../../transitions/schedule'
   import Day from './Day/Day.svelte'
   import { mobile } from '../../stores'
-  
+
   let height, width, outro
   let schedules = []
+  let bios = {}
 
   const yOffsets = [0.5, 0.7, 0.35]
   const days = ['Friday', 'Saturday', 'Sunday']
@@ -16,8 +17,12 @@
   const parseSchedule = async () => {
     const response = await fetch('schedule.json')
     const json = await response.json()
-    schedules = Object.keys(json).map(key => json[key])
-    return
+    return Object.keys(json).map(key => json[key])
+  }
+
+  const parseBios = async () => {
+    const response = await fetch('bios.json')
+    return await response.json()
   }
 
   page.exit('/schedule', (ctx, next) => {
@@ -26,9 +31,10 @@
     const transition = scheduleTransitions.outro(distance, $mobile)
     transition.finished.then(next)
   })
-  
+
   onMount(async () => {
-    await parseSchedule()
+    schedules = await parseSchedule()
+    bios = await parseBios()
     scheduleTransitions.intro(width)
   })
 </script>
@@ -39,21 +45,21 @@
     {#each "SCHEDULE".split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
-  </div>   
-  <div class='schedule-content' 
+  </div>
+  <div class='schedule-content'
   bind:clientHeight={height}
   bind:clientWidth={width}>
     {#each schedules as schedule, i}
-      <Day 
+      <Day
         index={i}
         delay={200}
-        day={days[i]} 
+        day={days[i]}
         schedule={schedule}
         yOffset={yOffsets[i] * height} />
     {/each}
   </div>
 </div>
-  
+
 <style>
   .schedule {
     display: flex;
