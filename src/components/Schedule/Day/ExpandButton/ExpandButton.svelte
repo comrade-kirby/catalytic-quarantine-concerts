@@ -36,6 +36,7 @@
     align-items: flex-end;
     background: transparent;
     border: none;
+    cursor: pointer;
   }
 
   .button-label {

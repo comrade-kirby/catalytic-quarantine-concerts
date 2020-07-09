@@ -68,5 +68,6 @@
     color: aliceblue;
     text-shadow: none;
     border-radius: 3px;
+    cursor: pointer;
   }
 </style>
