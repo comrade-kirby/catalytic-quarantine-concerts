@@ -147,19 +147,21 @@
       "start_time": "1:25",
       "end_time": "1:55",
       "type": "Set",
-      "artists": ["Chris Corsano", "Håker Flaten", "Nate Wooley"]
+      "artists": ["Chris Corsano", "Ingebrigt Håker Flaten", "Nate Wooley"]
     },
     {
       "act": "Video by Patrick Cain",
       "start_time": "1:55",
       "end_time": "2",
-      "type": "Video"
+      "type": "Video",
+      "artists": ["Patrick Cain"]
     },
     {
       "act": "Mats Gustafsson",
       "start_time": "2",
       "end_time": "2:20",
-      "type": "Set"
+      "type": "Set",
+      "artists": ["Mats Gustafsson"]
     },
     {
       "act": "Video by Patrick Cain",
@@ -243,7 +245,7 @@
       "start_time": "8:25",
       "end_time": "8:55",
       "type": "Set",
-      "artists": null
+      "artists": ["Marker"]
     },
     {
       "act": "End",
