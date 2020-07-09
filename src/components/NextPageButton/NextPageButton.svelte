@@ -130,6 +130,8 @@
     .button-container {
       flex-direction: column;
       right: 0;
+      height: unset;
+      width: 100%;
       bottom: -20px;
       transition: bottom 0.3s ease-in-out;
     }

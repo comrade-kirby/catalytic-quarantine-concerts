@@ -53,4 +53,14 @@
     flex: 1;
     align-items: center;
   }
+
+  @media only screen and (max-width: 1200px) {
+    .stage {
+      flex-direction: column;
+    }
+    
+    .video-container {
+      flex-direction: column;
+    }
+  }
 </style>
