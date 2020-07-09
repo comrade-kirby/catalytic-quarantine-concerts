@@ -7,7 +7,7 @@
       height: 480,
       chat: true,
       channel: "experimental_sound_studio",
-      parent: ["festival.catalyticsound.com", "festival.catalyticsound.com/stage"]
+      parent: ["festival.catalyticsound.com"]
       // layout: 'video'
     });
   })
