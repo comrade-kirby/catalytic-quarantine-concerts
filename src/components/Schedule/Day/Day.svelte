@@ -54,7 +54,8 @@
 
 <div 
   class='schedule-day-container'
-  class:open >
+  class:open
+  class:bio-open={selectedRow} >
   {#if schedule && bios}
   <div 
     class='schedule-day' 
@@ -85,6 +86,12 @@
 <style>
   .schedule-day-container {
     margin: 20px;
+    flex: 1;
+  }
+
+  .bio-open {
+    margin: 10px;
+    flex: 1.5;
   }
 
  .schedule-day {
