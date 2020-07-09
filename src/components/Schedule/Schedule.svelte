@@ -44,8 +44,8 @@
 <div class='schedule'>
   <Header headerText='SCHEDULE' outro={outro} />
   <div class='schedule-content'
-  bind:clientHeight={height}
-  bind:clientWidth={width}>
+    bind:clientHeight={height}
+    bind:clientWidth={width}>
     {#each schedules as schedule, i}
       <Day
         index={i}

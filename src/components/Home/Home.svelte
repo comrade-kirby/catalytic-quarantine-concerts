@@ -39,7 +39,7 @@
     initialVisit={initialVisit}
     homeWidth={width} 
     homeHeight={height}
-    nextPage={'schedule'} />
+    nextPage={'stage'} />
 </div>
 
 <style>
