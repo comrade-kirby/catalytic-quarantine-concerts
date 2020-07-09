@@ -6,7 +6,7 @@
 
 <div class='stage'>
   <Video />
-  <Chat />
+  <!-- <Chat /> -->
 </div>
 
 <style>
