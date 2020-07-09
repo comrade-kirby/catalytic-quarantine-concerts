@@ -4,7 +4,7 @@
 
   import FestivalInfo from './FestivalInfo/FestivalInfo.svelte'
   import FestivalDetails from './FestivalDetails/FestivalDetails.svelte'
-  import NextPageButton from './NextPageButton/NextPageButton.svelte'
+  import NextPageButton from '../NextPageButton/NextPageButton.svelte'
 
   export let initialVisit
   
@@ -37,8 +37,8 @@
   <NextPageButton 
     delay={4200}
     initialVisit={initialVisit}
-    homeWidth={width} 
-    homeHeight={height}
+    parentWidth={width} 
+    parentHeight={height}
     nextPage={'stage'} />
 </div>
 

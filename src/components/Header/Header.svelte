@@ -3,7 +3,7 @@
   export let outro
 </script>
 
-<div class='header-container' class:outro>
+<div class='header-container outro-item' class:outro>
   {#each headerText.split("") as letter }
     <h3 class='button-letter'>{letter}</h3>
   {/each}

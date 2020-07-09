@@ -12,13 +12,6 @@ const transitions = {
     })
     
     const gradientRotation = mobile ? '180deg' : '90deg'
-    anime({
-      targets: '.home',
-      background: [
-        `linear-gradient(${gradientRotation}, rgba(0, 0, 0, 15%), rgba(0, 0, 0, 0%))`,
-        `linear-gradient(${gradientRotation}, rgba(0, 0, 0, 0%), rgba(0, 0, 0, 0%))`
-      ]
-    })
 
     const slideTransition = {
       targets: '.button-container',

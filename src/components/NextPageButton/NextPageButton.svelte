@@ -3,20 +3,20 @@
   import anime from 'animejs/lib/anime.es.js'
   import page from 'page'
 
-  import homeTransitions from '../../../transitions/home'
-  import { mobile } from '../../../stores'
+  import homeTransitions from '../../transitions/home'
+  import { mobile } from '../../stores'
 
   export let delay
   export let initialVisit
-  export let homeWidth
-  export let homeHeight
+  export let parentWidth
+  export let parentHeight
   export let nextPage
 
   let height, width, clicked
 
   const onClick = async () => {
     clicked = true
-    const home = $mobile ? homeHeight : homeWidth
+    const home = $mobile ? parentHeight : parentWidth
     const button = $mobile ? height : width
     await homeTransitions.outro(home, button, $mobile)
     page('/' + nextPage)
@@ -71,6 +71,7 @@
   .button-container {
     position: relative;
     right: -20px;
+    height: 100%;
     display: flex;
     transition: right 0.3s ease-in-out;
   }

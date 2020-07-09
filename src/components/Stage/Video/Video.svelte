@@ -12,7 +12,7 @@
   })
 </script>
 
-<div class='video'>
+<div class='video outro-item'>
   <div id='twitch-embed'></div>
 </div>
 

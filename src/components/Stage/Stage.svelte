@@ -5,31 +5,38 @@
   import Video from './Video/Video.svelte'
   import Chat from './Chat/Chat.svelte'
   import Header from '../Header/Header.svelte'
+  import NextPageButton from '../NextPageButton/NextPageButton.svelte'
   import { mobile } from '../../stores'
   import stageTransitions from '../../transitions/stage'
 
-    
-  let height, width, outro
+  let pageHeight, pageWidth, contentHeight, contentWidth, outro
 
   page.exit('/stage', (ctx, next) => {
     outro = true
-    const distance = $mobile ? height : width
-    const transition = stageTransitions.outro(distance, $mobile)
+    const distance = $mobile ? contentHeight : contentWidth
+    const direction = ctx.page.current === '/' ? 'back' : 'forward'
+    const transition = stageTransitions.outro(distance, $mobile, direction)
     transition.finished.then(next)
   })
 
   onMount(() => {
-    stageTransitions.intro(width)
+    stageTransitions.intro(contentWidth)
   })
 </script>
 
-<div class='stage'>
+<div class='stage'
+  bind:clientHeight={pageHeight}
+  bind:clientWidth={pageWidth} >
   <Header headerText='STAGE' outro={outro} />
   <div class='video-container'
-    bind:clientHeight={height}
-    bind:clientWidth={width} >
+  bind:clientHeight={contentHeight}
+  bind:clientWidth={contentWidth} >
     <Video />
-    <Chat />
+    <NextPageButton 
+      delay={4200}
+      parentWidth={pageWidth} 
+      parentHeight={pageHeight}
+      nextPage={'schedule'} />
   </div>
 </div>
 
@@ -44,8 +51,6 @@
     display: flex;
     flex-direction: row;
     flex: 1;
-    justify-content: space-between;
     align-items: center;
-    padding: 40px;
   }
 </style>
