@@ -13,15 +13,21 @@
   export let bios
   export let yOffset = 500
   
-  let height
+  let height, selectedRow
   let open = false
   let hover = false
+
+  const selectRow = (row) => {
+    if (!open) { toggleOpen() }
+    selectedRow = selectedRow == row ? null : row
+  }
 
   const calcYOffset = (yOffset, height) => {
     return yOffset - (height / 2)
   }
   
   const toggleOpen = () => {
+    selectedRow = null
     open = !open
   }
 
@@ -68,7 +74,8 @@
             open={open}
             dayIndex={dayIndex}
             artistBios={findArtistBios(row, bios)}
-            toggleOpen={toggleOpen} />
+            selectedRow={selectedRow}
+            selectRow={selectRow} />
         {/each}
       </div>
     </div>

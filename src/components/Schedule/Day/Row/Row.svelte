@@ -8,19 +8,13 @@
   export let open
   export let dayIndex
   export let artistBios
-  export let toggleOpen
+  export let selectedRow
+  export let selectRow
 
   let festivalBreak = false
 
-  let bioOpen = false
-
   const isABreak = (type) => {
     return ['Video', 'Break'].includes(type)
-  }
-
-  const artistClicked = () => {
-    if (!open) { toggleOpen() }
-    bioOpen = !bioOpen
   }
 
   onMount(() => {
@@ -40,10 +34,10 @@
     <h6
       class='artist artist{dayIndex}' 
       class:festivalBreak
-      on:click|stopPropagation={artistClicked} >
+      on:click|stopPropagation={ () => selectRow(row) } >
       {row.act}
-    </h6>
-    {#if bioOpen}
+    </h6> 
+    {#if row == selectedRow}
       {#each artistBios as bio}
         <Bio bio={bio} />
       {/each}
