@@ -6,7 +6,7 @@
   <iframe
     title='twitch-chat'
     id="chat_embed"
-    src="https://www.twitch.tv/embed/experimental_sound_studio/chat?parent=8a5309c2ab5f.ngrok.io"
+    src="https://www.twitch.tv/embed/experimental_sound_studio/chat?parent=festival.catalyticsound.com"
     height={height - 10}>
   </iframe>
 </div>
