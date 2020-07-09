@@ -5,7 +5,7 @@
 </script>
 
 <div class='stage'>
-  <h1>2</h1>
+  <!-- <h1>2</h1> -->
 
   <Video />
   <!-- <Chat /> -->

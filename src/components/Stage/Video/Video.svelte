@@ -8,7 +8,6 @@
       chat: true,
       channel: "experimental_sound_studio",
       parent: ["catalyticsound.com"]
-      // layout: 'video'
     });
   })
 </script>
