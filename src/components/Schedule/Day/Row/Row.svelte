@@ -91,7 +91,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin: 0 10px 10px 0;
+    margin: 0 10px 10px 10px;
   }
 
   .artist {
@@ -127,7 +127,6 @@
   .open .time {
     max-height: unset;
     max-width: unset;
-    margin-right: 15px;
   }
 
   .open .start-time {

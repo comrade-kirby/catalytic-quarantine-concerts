@@ -17,7 +17,9 @@
         <PayPal />
       </div>
       <div class='festival-details-bottom-right'>
-      <p>Music, video, and live performances each day at 1 pm and 7 pm US Central Time. Discussion panel after each afternoon program.</p>
+      <p>
+        Performances each day at 1 pm and 7 pm US Central Time. Discussion panels at 3 pm. Presented in collaboration with <a href="https://www.twitch.tv/experimental_sound_studio">ESS Quarantine Concerts</a>.
+      </p>
       <MailChimp />
       </div>
     </div>
@@ -87,6 +89,18 @@
     font-family: var(--sans-serif-1);
     text-justify: inter-character;
     padding: 20px;
+  }
+
+  a {
+    display: inline;
+    text-shadow: none;
+    text-decoration: underline;
+    font-size: 1rem;
+    font-family: var(--sans-serif-1);
+    font-size: 1.25rem;
+		line-height: 2.25rem;
+    /* background-color: transparent; */
+    padding: 0;
   }
 
   @media only screen and (max-width: 1200px) {

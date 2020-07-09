@@ -28,5 +28,6 @@
     color: black;
     font-size: 1rem;
     white-space: pre-line;
+    text-align: justify;
   }
 </style>
