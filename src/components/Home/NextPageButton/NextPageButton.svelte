@@ -1,6 +1,8 @@
 <script>
   import { onMount, tick } from 'svelte'
   import anime from 'animejs/lib/anime.es.js'
+  import page from 'page'
+
   import homeTransitions from '../../../transitions/home'
   import { mobile } from '../../../stores'
 
@@ -8,14 +10,16 @@
   export let initialVisit
   export let homeWidth
   export let homeHeight
+  export let nextPage
 
   let height, width, clicked
 
-  const onClick = () => {
+  const onClick = async () => {
     clicked = true
     const home = $mobile ? homeHeight : homeWidth
     const button = $mobile ? height : width
-    homeTransitions.outro(home, button, $mobile)
+    await homeTransitions.outro(home, button, $mobile)
+    page('/' + nextPage)
   }
 
   onMount( async () => {
@@ -55,7 +59,7 @@
     class='right-button' 
     bind:clientWidth={width}
     bind:clientHeight={height}>
-    {#each "SCHEDULE".split("") as letter }
+    {#each nextPage.toUpperCase().split("") as letter }
       <h3 class='button-letter'>{letter}</h3>
     {/each}
   </button> 

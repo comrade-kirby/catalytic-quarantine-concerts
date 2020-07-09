@@ -1,5 +1,4 @@
 import anime from 'animejs/lib/anime.es.js'
-import page from 'page'
 
 const transitions = {
   outro: async (home, button, mobile) => {
@@ -33,8 +32,7 @@ const transitions = {
     }
     
     const slide = anime(slideTransition)
-    await slide.finished
-    page('/schedule')
+    return await slide.finished
   }
 }
 

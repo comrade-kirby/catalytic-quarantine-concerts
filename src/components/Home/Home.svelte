@@ -4,7 +4,7 @@
 
   import FestivalInfo from './FestivalInfo/FestivalInfo.svelte'
   import FestivalDetails from './FestivalDetails/FestivalDetails.svelte'
-  import RightButton from './RightButton/RightButton.svelte'
+  import NextPageButton from './NextPageButton/NextPageButton.svelte'
 
   export let initialVisit
   
@@ -34,11 +34,12 @@
       <span class="material-icons">arrow_forward</span>
     </a>  
   </div>
-  <RightButton 
+  <NextPageButton 
     delay={4200}
     initialVisit={initialVisit}
     homeWidth={width} 
-    homeHeight={height} />
+    homeHeight={height}
+    nextPage={'schedule'} />
 </div>
 
 <style>
