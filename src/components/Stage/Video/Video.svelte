@@ -36,7 +36,7 @@ import { mobile } from '../../../stores'
       <div class='twitch-rec video-intro'>
         <h5>Trouble joining the chat?</h5>
         <p>Try Firefox, Google Chrome or watch on 
-          <a class='underline' href='https://www.twitch.tv/experimental_sound_studio'>Twitch.tv</a> 
+          <a class='underline' href='https://www.twitch.tv/experimental_sound_studio' target="_blank">Twitch.tv</a> 
         </p>
       </div>
     {/if}
