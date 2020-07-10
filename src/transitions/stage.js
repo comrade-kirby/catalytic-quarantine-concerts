@@ -2,11 +2,13 @@ import anime from 'animejs/lib/anime.es.js'
 
 const transitions = {
   intro: (width, lastPage) => {
+    const targets = document.querySelectorAll('.video-intro')
+
     anime({
-      targets: '.video',
+      targets: targets,
       opacity: [0, 1],
       duration: 1000,
-      delay: 500,
+      delay: anime.stagger(100, {from: 'first'}),
       easing: 'easeInOutExpo',
     })
   },
