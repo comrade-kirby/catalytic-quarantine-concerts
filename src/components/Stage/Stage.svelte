@@ -6,10 +6,10 @@
   import Chat from './Chat/Chat.svelte'
   import Header from '../Header/Header.svelte'
   import NextPageButton from '../NextPageButton/NextPageButton.svelte'
-  import { mobile } from '../../stores'
+  import { mobile, lastPage } from '../../stores'
   import stageTransitions from '../../transitions/stage'
 
-  let pageHeight, pageWidth, contentHeight, contentWidth, outro
+  let pageHeight, pageWidth, contentHeight, contentWidth, outro, animateIn
 
   page.exit('/stage', (ctx, next) => {
     outro = true
@@ -20,7 +20,9 @@
   })
 
   onMount(() => {
-    stageTransitions.intro(contentWidth)
+    animateIn = $lastPage == 'home' ? true : false
+    stageTransitions.intro(contentWidth, $lastPage)
+    lastPage.set('stage')
   })
 </script>
 
@@ -33,9 +35,10 @@
   bind:clientWidth={contentWidth} >
     <Video />
     <NextPageButton 
-      delay={4200}
+      delay={500}
       parentWidth={pageWidth} 
       parentHeight={pageHeight}
+      animateIn={animateIn}
       nextPage={'schedule'} />
   </div>
 </div>
@@ -58,7 +61,7 @@
     .stage {
       flex-direction: column;
     }
-    
+
     .video-container {
       flex-direction: column;
     }

@@ -5,7 +5,7 @@
   import FestivalInfo from './FestivalInfo/FestivalInfo.svelte'
   import FestivalDetails from './FestivalDetails/FestivalDetails.svelte'
   import NextPageButton from '../NextPageButton/NextPageButton.svelte'
-
+  import { lastPage } from '../../stores'
   export let initialVisit
   
   let width, height
@@ -20,6 +20,7 @@
       });
     }
   })
+  lastPage.set('home')
 </script>
 
 <div class='home' bind:clientWidth={width} bind:clientHeight={height}>
@@ -36,7 +37,7 @@
   </div>
   <NextPageButton 
     delay={4200}
-    initialVisit={initialVisit}
+    animateIn={initialVisit}
     parentWidth={width} 
     parentHeight={height}
     nextPage={'stage'} />

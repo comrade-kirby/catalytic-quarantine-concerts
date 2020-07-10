@@ -6,7 +6,7 @@
   import scheduleTransitions from '../../transitions/schedule'
   import Header from '../Header/Header.svelte'
   import Day from './Day/Day.svelte'
-  import { mobile } from '../../stores'
+  import { mobile, lastPage } from '../../stores'
 
   let height, width, outro
   let schedules = []
@@ -37,6 +37,7 @@
     schedules = await parseSchedule()
     bios = await parseBios()
     scheduleTransitions.intro(width)
+    lastPage.set('schedule')
   })
 </script>
 

@@ -5,7 +5,7 @@
 
 <div class='header-container outro-item' class:outro>
   {#each headerText.split("") as letter }
-    <h3 class='button-letter'>{letter}</h3>
+    <h3 class='header-letter'>{letter}</h3>
   {/each}
 </div>
 
@@ -22,7 +22,7 @@
     transition: background-color 1s ease-in-out 0.45s, border-right 1s ease-in-out 0.45s;
   }
 
-  .button-letter {
+  .header-letter {
     margin: 10px 30px;
     color: black;
     text-shadow: none;
@@ -34,7 +34,7 @@
     border-left: 5px solid aliceblue;
   }
 
-  .header-container.outro .button-letter{
+  .header-container.outro .header-letter{
     color: aliceblue;
   }
 
@@ -48,7 +48,7 @@
       top: 0;
     }
 
-    .button-letter {
+    .header-letter {
       margin: 15px 10px;
     }
 

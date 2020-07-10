@@ -7,7 +7,7 @@
   import { mobile } from '../../stores'
 
   export let delay
-  export let initialVisit
+  export let animateIn
   export let parentWidth
   export let parentHeight
   export let nextPage
@@ -24,30 +24,30 @@
 
   onMount( async () => {
     await tick()
-    const letters = document.querySelectorAll('.button-letter')
-    
-    const containerTransition = {
-      targets: '.button-container',
-      delay: delay,
-      easing: 'easeOutExpo',
-    }
+    if (animateIn) {
+      const letters = document.querySelectorAll('.button-letter')
+      
+      const containerTransition = {
+        targets: '.button-container',
+        delay: delay,
+        easing: 'easeOutExpo',
+      }
 
-    const letterTransition = {
-      targets: letters,
-      opacity: [0, 1],
-      delay: anime.stagger(50, {start: delay, from: 'center'}),
-      easing: 'easeOutExpo'
-    }
+      const letterTransition = {
+        targets: letters,
+        opacity: [0, 1],
+        delay: anime.stagger(50, {start: delay, from: 'center'}),
+        easing: 'easeOutExpo'
+      }
 
-    if ($mobile) {
-      containerTransition.translateY = [innerHeight + 20, 0]
-      letterTransition.translateY = [innerHeight + 20, 0]
-    } else {
-      containerTransition.translateX = [width + 20, 0]
-      letterTransition.translateX = [width + 20, 0]
-    }
+      if ($mobile) {
+        containerTransition.translateY = [innerHeight + 20, 0]
+        letterTransition.translateY = [innerHeight + 20, 0]
+      } else {
+        containerTransition.translateX = [width + 20, 0]
+        letterTransition.translateX = [width + 20, 0]
+      }
 
-    if (initialVisit) {
       anime(containerTransition)
       anime(letterTransition)
     }

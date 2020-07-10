@@ -1,41 +1,39 @@
 import anime from 'animejs/lib/anime.es.js'
 
 const transitions = {
-  intro: (width) => {
+  intro: (width, lastPage) => {
     anime({
       targets: '.video',
-      translateX: [width, 0],
       opacity: [0, 1],
       duration: 1000,
-      delay: anime.stagger(150, {from: 'first'}),
+      delay: 500,
       easing: 'easeInOutExpo',
     })
   },
   outro: (distance, mobile, direction) => {
     const target = direction == 'back' ? '.video-container' : '.video'
 
-    const rotateTransition = {
+    const videoTransition = {
       targets: target,
       opacity: 0,
       delay: anime.stagger(100, {from: 'first'}),
       easing: 'easeInOutExpo',
     }
 
-    const slideTransition = {
+    const buttonTransition = {
       targets: '.header-container',
       delay: 300,
       easing: 'easeInOutExpo',
     }
 
     if (mobile) {
-      slideTransition.translateY = distance
+      buttonTransition.translateY = distance
     } else {
-      slideTransition.translateX = distance
+      buttonTransition.translateX = distance
     }
 
-    anime(rotateTransition)
-    anime(slideTransition)
-    return anime(slideTransition)
+    anime(videoTransition)
+    return anime(buttonTransition)
   }
 }
 
