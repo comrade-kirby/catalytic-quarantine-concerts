@@ -11,6 +11,7 @@
       height: height,
       chat: true,
       channel: "experimental_sound_studio",
+      parent: ["catalyticsound.com"],
       layout: $mobile ? 'video' : null
     });
   })
